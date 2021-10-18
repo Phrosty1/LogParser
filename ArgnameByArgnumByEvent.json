@@ -1,0 +1,2307 @@
+{
+    "EVENT_ABILITY_PROGRESSION_RANK_UPDATE": {
+        "arg1": "progressionIndex",
+        "arg2": "rank",
+        "arg3": "maxRank",
+        "arg4": "morph"
+    },
+    "EVENT_ABILITY_PROGRESSION_RESULT": {
+        "arg1": "reason"
+    },
+    "EVENT_ABILITY_PROGRESSION_XP_UPDATE": {
+        "arg1": "progressionIndex",
+        "arg2": "lastRankXP",
+        "arg3": "nextRankXP",
+        "arg4": "currentXP",
+        "arg5": "atMorph"
+    },
+    "EVENT_ABILITY_REQUIREMENTS_FAIL": {
+        "arg1": "errorId"
+    },
+    "EVENT_ACHIEVEMENT_AWARDED": {
+        "arg1": "name",
+        "arg2": "points",
+        "arg3": "id",
+        "arg4": "link"
+    },
+    "EVENT_ACHIEVEMENT_UPDATED": {
+        "arg1": "id"
+    },
+    "EVENT_ACTION_BAR_IS_RESPECCABLE_BAR_STATE_CHANGED": {
+        "arg1": "isRepeccableBarState"
+    },
+    "EVENT_ACTION_BAR_LOCKED_REASON_CHANGED": {
+        "arg1": "actionBarLockedReason"
+    },
+    "EVENT_ACTION_LAYER_POPPED": {
+        "arg1": "layerIndex",
+        "arg2": "activeLayerIndex"
+    },
+    "EVENT_ACTION_LAYER_PUSHED": {
+        "arg1": "layerIndex",
+        "arg2": "activeLayerIndex"
+    },
+    "EVENT_ACTION_SLOTS_ACTIVE_HOTBAR_UPDATED": {
+        "arg1": "didActiveHotbarChange",
+        "arg2": "shouldUpdateAbilityAssignments",
+        "arg3": "activeHotbarCategory"
+    },
+    "EVENT_ACTION_SLOT_ABILITY_USED": {
+        "arg1": "actionSlotIndex"
+    },
+    "EVENT_ACTION_SLOT_ABILITY_USED_WRONG_WEAPON": {
+        "arg1": "weaponConfigType"
+    },
+    "EVENT_ACTION_SLOT_EFFECT_UPDATE": {
+        "arg1": "hotbar",
+        "arg2": "actionSlot"
+    },
+    "EVENT_ACTION_SLOT_STATE_UPDATED": {
+        "arg1": "actionSlotIndex"
+    },
+    "EVENT_ACTION_SLOT_UPDATED": {
+        "arg1": "actionSlotIndex"
+    },
+    "EVENT_ACTIVE_COMPANION_STATE_CHANGED": {
+        "arg1": "newState",
+        "arg2": "oldState"
+    },
+    "EVENT_ACTIVE_DAEDRIC_ARTIFACT_CHANGED": {
+        "arg1": "artifactId"
+    },
+    "EVENT_ACTIVE_QUEST_TOOL_CHANGED": {
+        "arg1": "journalIndex",
+        "arg2": "toolIndex"
+    },
+    "EVENT_ACTIVE_QUICKSLOT_CHANGED": {
+        "arg1": "actionSlotIndex"
+    },
+    "EVENT_ACTIVE_WEAPON_PAIR_CHANGED": {
+        "arg1": "activeWeaponPair",
+        "arg2": "locked"
+    },
+    "EVENT_ACTIVITY_FINDER_STATUS_UPDATE": {
+        "arg1": "result"
+    },
+    "EVENT_ACTIVITY_QUEUE_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_ADD_ON_LOADED": {
+        "arg1": "addonName"
+    },
+    "EVENT_ALLIANCE_POINT_UPDATE": {
+        "arg1": "alliancePoints",
+        "arg2": "playSound",
+        "arg3": "difference",
+        "arg4": "reason",
+        "arg5": "reasonSupplementaryInfo"
+    },
+    "EVENT_ANIMATION_NOTE": {
+        "arg1": "animNote"
+    },
+    "EVENT_ANTIQUITY_DIGGING_ACTIVE_SKILL_USE_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_ANTIQUITY_DIGGING_EXIT_RESPONSE": {
+        "arg1": "accept"
+    },
+    "EVENT_ANTIQUITY_DIGGING_GAME_OVER": {
+        "arg1": "gameOverFlags"
+    },
+    "EVENT_ANTIQUITY_DIGGING_MOUSE_OVER_ACTIVE_SKILL_CHANGED": {
+        "arg1": "mousedOverSkill"
+    },
+    "EVENT_ANTIQUITY_DIGGING_NUM_RADARS_REMAINING_CHANGED": {
+        "arg1": "numRadarsRemaining"
+    },
+    "EVENT_ANTIQUITY_DIG_SITES_UPDATED": {
+        "arg1": "antiquityId"
+    },
+    "EVENT_ANTIQUITY_DIG_SPOT_DIG_POWER_CHANGED": {
+        "arg1": "digPower"
+    },
+    "EVENT_ANTIQUITY_DIG_SPOT_DURABILITY_CHANGED": {
+        "arg1": "durability"
+    },
+    "EVENT_ANTIQUITY_DIG_SPOT_STABILITY_CHANGED": {
+        "arg1": "stability"
+    },
+    "EVENT_ANTIQUITY_LEAD_ACQUIRED": {
+        "arg1": "antiquityId"
+    },
+    "EVENT_ANTIQUITY_SCRYING_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_ANTIQUITY_SHOW_CODEX_ENTRY": {
+        "arg1": "antiquityId"
+    },
+    "EVENT_ANTIQUITY_TRACKING_UPDATE": {
+        "arg1": "trackedAntiquityId"
+    },
+    "EVENT_ANTIQUITY_UPDATED": {
+        "arg1": "antiquityId"
+    },
+    "EVENT_ARTIFACT_CONTROL_STATE": {
+        "arg1": "artifactName",
+        "arg2": "keepId",
+        "arg3": "characterName",
+        "arg4": "playerAlliance",
+        "arg5": "objectiveControlEvent",
+        "arg6": "objectiveControlState",
+        "arg7": "campaignId",
+        "arg8": "displayName"
+    },
+    "EVENT_ARTIFACT_SCROLL_STATE_CHANGED": {
+        "arg1": "objectiveKeepId",
+        "arg10": "capturedAtKeepId",
+        "arg11": "pinType",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "objectiveName",
+        "arg5": "objectiveControlEvent",
+        "arg6": "objectiveControlState",
+        "arg7": "originalOwnerAlliance",
+        "arg8": "holderAlliance",
+        "arg9": "lastHolderAlliance"
+    },
+    "EVENT_ARTIFICIAL_EFFECT_ADDED": {
+        "arg1": "artificialEffectId"
+    },
+    "EVENT_ARTIFICIAL_EFFECT_REMOVED": {
+        "arg1": "artificialEffectId"
+    },
+    "EVENT_ASSIGNED_CAMPAIGN_CHANGED": {
+        "arg1": "newAssignedCampaignId"
+    },
+    "EVENT_AVENGE_KILL": {
+        "arg1": "avengedCharacterName",
+        "arg2": "killedCharacterName",
+        "arg3": "avengedDisplayName",
+        "arg4": "killedDisplayName"
+    },
+    "EVENT_BACKGROUND_LIST_FILTER_COMPLETE": {
+        "arg1": "taskId"
+    },
+    "EVENT_BANKED_CURRENCY_UPDATE": {
+        "arg1": "currency",
+        "arg2": "newValue",
+        "arg3": "oldValue"
+    },
+    "EVENT_BANKED_MONEY_UPDATE": {
+        "arg1": "newValue",
+        "arg2": "oldValue"
+    },
+    "EVENT_BATTLEGROUND_KILL": {
+        "arg1": "killedPlayerCharacterName",
+        "arg2": "killedPlayerDisplayName",
+        "arg3": "killedPlayerBattlegroundAlliance",
+        "arg4": "killingPlayerCharacterName",
+        "arg5": "killingPlayerDisplayName",
+        "arg6": "killingPlayerBattlegroundAlliance",
+        "arg7": "battlegroundKillType",
+        "arg8": "killingAbilityId"
+    },
+    "EVENT_BATTLEGROUND_SHUTDOWN_TIMER": {
+        "arg1": "enabled"
+    },
+    "EVENT_BATTLEGROUND_STATE_CHANGED": {
+        "arg1": "previousState",
+        "arg2": "currentState"
+    },
+    "EVENT_BOSSES_CHANGED": {
+        "arg1": "forceReset"
+    },
+    "EVENT_BROADCAST": {
+        "arg1": "message"
+    },
+    "EVENT_BUYBACK_RECEIPT": {
+        "arg1": "itemLink",
+        "arg2": "itemQuantity",
+        "arg3": "money",
+        "arg4": "itemSoundCategory"
+    },
+    "EVENT_BUY_RECEIPT": {
+        "arg1": "entryName",
+        "arg10": "specialCurrencyQuantity2",
+        "arg11": "itemSoundCategory",
+        "arg2": "entryType",
+        "arg3": "entryQuantity",
+        "arg4": "money",
+        "arg5": "specialCurrencyType1",
+        "arg6": "specialCurrencyInfo1",
+        "arg7": "specialCurrencyQuantity1",
+        "arg8": "specialCurrencyType2",
+        "arg9": "specialCurrencyInfo2"
+    },
+    "EVENT_CADWELL_PROGRESSION_LEVEL_CHANGED": {
+        "arg1": "progressionLevel"
+    },
+    "EVENT_CAMPAIGN_ALLIANCE_LOCK_ACTIVATED": {
+        "arg1": "campaignId",
+        "arg2": "wasLockedToAlliance"
+    },
+    "EVENT_CAMPAIGN_ALLIANCE_LOCK_PENDING": {
+        "arg1": "campaignId",
+        "arg2": "lockedToAlliance",
+        "arg3": "timeLeftS"
+    },
+    "EVENT_CAMPAIGN_ASSIGNMENT_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_CAMPAIGN_EMPEROR_CHANGED": {
+        "arg1": "campaignId"
+    },
+    "EVENT_CAMPAIGN_QUEUE_JOINED": {
+        "arg1": "campaignId",
+        "arg2": "isGroupMember",
+        "arg3": "willLockToAlliance"
+    },
+    "EVENT_CAMPAIGN_QUEUE_LEFT": {
+        "arg1": "campaignId",
+        "arg2": "isGroup"
+    },
+    "EVENT_CAMPAIGN_QUEUE_POSITION_CHANGED": {
+        "arg1": "campaignId",
+        "arg2": "isGroup",
+        "arg3": "position"
+    },
+    "EVENT_CAMPAIGN_QUEUE_STATE_CHANGED": {
+        "arg1": "campaignId",
+        "arg2": "isGroup",
+        "arg3": "state"
+    },
+    "EVENT_CAMPAIGN_STATE_INITIALIZED": {
+        "arg1": "campaignId"
+    },
+    "EVENT_CAMPAIGN_UNASSIGNMENT_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_CAMPAIGN_UNDERPOP_BONUS_CHANGE_NOTIFICATION": {
+        "arg1": "campaignId"
+    },
+    "EVENT_CANNOT_CROUCH_WHILE_CARRYING_ARTIFACT": {
+        "arg1": "artifactName"
+    },
+    "EVENT_CAPS_LOCK_STATE_CHANGED": {
+        "arg1": "capsLockEnabled"
+    },
+    "EVENT_CAPTURE_AREA_SPAWNED": {
+        "arg1": "objectiveKeepId",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "pinType",
+        "arg5": "hasMoved"
+    },
+    "EVENT_CAPTURE_AREA_STATE_CHANGED": {
+        "arg1": "objectiveKeepId",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "objectiveName",
+        "arg5": "objectiveControlEvent",
+        "arg6": "objectiveControlState",
+        "arg7": "owningAlliance",
+        "arg8": "pinType"
+    },
+    "EVENT_CAPTURE_AREA_STATUS": {
+        "arg1": "keepId",
+        "arg2": "objectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "capturePoolValue",
+        "arg5": "capturePoolMax",
+        "arg6": "capturingPlayers",
+        "arg7": "contestingPlayers",
+        "arg8": "owningAlliance",
+        "arg9": "pinType"
+    },
+    "EVENT_CAPTURE_FLAG_STATE_CHANGED": {
+        "arg1": "objectiveKeepId",
+        "arg10": "pinType",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "objectiveName",
+        "arg5": "objectiveControlEvent",
+        "arg6": "objectiveControlState",
+        "arg7": "originalOwnerAlliance",
+        "arg8": "holderAlliance",
+        "arg9": "lastHolderAlliance"
+    },
+    "EVENT_CARRIED_CURRENCY_UPDATE": {
+        "arg1": "currency",
+        "arg2": "newValue",
+        "arg3": "oldValue",
+        "arg4": "reason",
+        "arg5": "reasonSupplementaryInfo"
+    },
+    "EVENT_CHAMPION_LEVEL_ACHIEVED": {
+        "arg1": "wasChampionSystemUnlocked"
+    },
+    "EVENT_CHAMPION_POINT_GAINED": {
+        "arg1": "championPointsDelta"
+    },
+    "EVENT_CHAMPION_POINT_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "oldChampionPoints",
+        "arg3": "currentChampionPoints"
+    },
+    "EVENT_CHAMPION_PURCHASE_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_CHATTER_BEGIN": {
+        "arg1": "optionCount",
+        "arg2": "debugSource"
+    },
+    "EVENT_CHAT_CATEGORY_COLOR_CHANGED": {
+        "arg1": "categoryId",
+        "arg2": "red",
+        "arg3": "green",
+        "arg4": "blue"
+    },
+    "EVENT_CHAT_LOG_TOGGLED": {
+        "arg1": "opened"
+    },
+    "EVENT_CHAT_MESSAGE_CHANNEL": {
+        "arg1": "channelType",
+        "arg2": "fromName",
+        "arg3": "text",
+        "arg4": "isCustomerService",
+        "arg5": "fromDisplayName"
+    },
+    "EVENT_CLAIM_REWARD_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_CLIENT_INTERACT_RESULT": {
+        "arg1": "result",
+        "arg2": "interactTargetName"
+    },
+    "EVENT_COLLECTIBLE_CATEGORY_NEW_STATUS_CLEARED": {
+        "arg1": "categoryId"
+    },
+    "EVENT_COLLECTIBLE_DYE_DATA_UPDATED": {
+        "arg1": "collectibleId"
+    },
+    "EVENT_COLLECTIBLE_NEW_STATUS_CLEARED": {
+        "arg1": "collectibleId"
+    },
+    "EVENT_COLLECTIBLE_NOTIFICATION_NEW": {
+        "arg1": "collectibleId",
+        "arg2": "notificationId"
+    },
+    "EVENT_COLLECTIBLE_NOTIFICATION_REMOVED": {
+        "arg1": "notificationId",
+        "arg2": "collectibleId"
+    },
+    "EVENT_COLLECTIBLE_RENAME_ERROR": {
+        "arg1": "errorReason"
+    },
+    "EVENT_COLLECTIBLE_REQUEST_BROWSE_TO": {
+        "arg1": "collectibleId"
+    },
+    "EVENT_COLLECTIBLE_UPDATED": {
+        "arg1": "id"
+    },
+    "EVENT_COLLECTIBLE_USE_RESULT": {
+        "arg1": "result",
+        "arg2": "isAttemptingActivation"
+    },
+    "EVENT_COMBAT_EVENT": {
+        "arg1": "result",
+        "arg10": "hitValue",
+        "arg11": "powerType",
+        "arg12": "damageType",
+        "arg13": "log",
+        "arg14": "sourceUnitId",
+        "arg15": "targetUnitId",
+        "arg16": "abilityId",
+        "arg17": "overflow",
+        "arg2": "isError",
+        "arg3": "abilityName",
+        "arg4": "abilityGraphic",
+        "arg5": "abilityActionSlotType",
+        "arg6": "sourceName",
+        "arg7": "sourceType",
+        "arg8": "targetName",
+        "arg9": "targetType"
+    },
+    "EVENT_COMPANION_ACTIVATED": {
+        "arg1": "companionId"
+    },
+    "EVENT_COMPANION_EXPERIENCE_GAIN": {
+        "arg1": "companionId",
+        "arg2": "level",
+        "arg3": "previousExperience",
+        "arg4": "currentExperience"
+    },
+    "EVENT_COMPANION_RAPPORT_UPDATE": {
+        "arg1": "companionId",
+        "arg2": "previousRapport",
+        "arg3": "currentRapport"
+    },
+    "EVENT_COMPANION_SKILLS_FULL_UPDATE": {
+        "arg1": "isInit"
+    },
+    "EVENT_COMPANION_SKILL_LINE_ADDED": {
+        "arg1": "skillLineId"
+    },
+    "EVENT_COMPANION_SKILL_RANK_UPDATE": {
+        "arg1": "skillLineId",
+        "arg2": "rank"
+    },
+    "EVENT_COMPANION_SKILL_XP_UPDATE": {
+        "arg1": "skillLineId",
+        "arg2": "reason",
+        "arg3": "rank",
+        "arg4": "previousXP",
+        "arg5": "currentXP"
+    },
+    "EVENT_COMPANION_SUMMON_RESULT": {
+        "arg1": "summonResult",
+        "arg2": "companionId"
+    },
+    "EVENT_COMPANION_ULTIMATE_FAILURE": {
+        "arg1": "reason",
+        "arg2": "companionName"
+    },
+    "EVENT_CONFIRM_INTERACT": {
+        "arg1": "dialogTitle",
+        "arg2": "dialogBody",
+        "arg3": "acceptText",
+        "arg4": "cancelText"
+    },
+    "EVENT_CONVERSATION_UPDATED": {
+        "arg1": "conversationBodyText",
+        "arg2": "conversationOptionCount"
+    },
+    "EVENT_CORONATE_EMPEROR_NOTIFICATION": {
+        "arg1": "campaignId",
+        "arg2": "emperorCharacterName",
+        "arg3": "emperorAlliance",
+        "arg4": "emperorDisplayName"
+    },
+    "EVENT_CRAFTING_STATION_INTERACT": {
+        "arg1": "craftSkill",
+        "arg2": "sameStation"
+    },
+    "EVENT_CRAFT_COMPLETED": {
+        "arg1": "craftSkill"
+    },
+    "EVENT_CRAFT_FAILED": {
+        "arg1": "tradeskillResult"
+    },
+    "EVENT_CRAFT_STARTED": {
+        "arg1": "craftSkill"
+    },
+    "EVENT_CROWN_CRATES_SYSTEM_STATE_CHANGED": {
+        "arg1": "crownCratesSystemState"
+    },
+    "EVENT_CROWN_CRATE_OPEN_RESPONSE": {
+        "arg1": "crownCrateId",
+        "arg2": "response"
+    },
+    "EVENT_CROWN_CRATE_QUANTITY_UPDATE": {
+        "arg1": "crateId",
+        "arg2": "newCount",
+        "arg3": "oldCount"
+    },
+    "EVENT_CROWN_GEM_UPDATE": {
+        "arg1": "crownGemAmount",
+        "arg2": "difference",
+        "arg3": "reason"
+    },
+    "EVENT_CROWN_UPDATE": {
+        "arg1": "crownAmount",
+        "arg2": "difference",
+        "arg3": "reason"
+    },
+    "EVENT_CURRENCY_UPDATE": {
+        "arg1": "currencyType",
+        "arg2": "currencyLocation",
+        "arg3": "newAmount",
+        "arg4": "oldAmount",
+        "arg5": "reason",
+        "arg6": "reasonSupplementaryInfo"
+    },
+    "EVENT_CURRENT_CAMPAIGN_CHANGED": {
+        "arg1": "newCurrentCampaignId"
+    },
+    "EVENT_CURSOR_DROPPED": {
+        "arg1": "type",
+        "arg2": "param1",
+        "arg3": "param2",
+        "arg4": "param3",
+        "arg5": "param4",
+        "arg6": "param5",
+        "arg7": "param6"
+    },
+    "EVENT_CURSOR_PICKUP": {
+        "arg1": "type",
+        "arg2": "param1",
+        "arg3": "param2",
+        "arg4": "param3",
+        "arg5": "param4",
+        "arg6": "param5",
+        "arg7": "param6",
+        "arg8": "itemSoundCategory"
+    },
+    "EVENT_CUSTOMER_SERVICE_FEEDBACK_SUBMITTED": {
+        "arg1": "responseMessage",
+        "arg2": "success"
+    },
+    "EVENT_CUSTOMER_SERVICE_TICKET_SUBMITTED": {
+        "arg1": "responseMessage",
+        "arg2": "success"
+    },
+    "EVENT_DAEDRIC_ARTIFACT_OBJECTIVE_SPAWNED_BUT_NOT_REVEALED": {
+        "arg1": "daedricArtifactId"
+    },
+    "EVENT_DAEDRIC_ARTIFACT_OBJECTIVE_STATE_CHANGED": {
+        "arg1": "objectiveKeepId",
+        "arg10": "lastObjectiveControlState",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "objectiveControlEvent",
+        "arg5": "objectiveControlState",
+        "arg6": "holderAlliance",
+        "arg7": "lastHolderAlliance",
+        "arg8": "pinType",
+        "arg9": "daedricArtifactId"
+    },
+    "EVENT_DEFERRED_SETTING_REQUEST_COMPLETED": {
+        "arg1": "settingSystemType",
+        "arg2": "settingId",
+        "arg3": "success",
+        "arg4": "result"
+    },
+    "EVENT_DEPOSE_EMPEROR_NOTIFICATION": {
+        "arg1": "campaignId",
+        "arg2": "emperorCharacterName",
+        "arg3": "emperorAlliance",
+        "arg4": "abdication",
+        "arg5": "emperorDisplayName"
+    },
+    "EVENT_DISCOVERY_EXPERIENCE": {
+        "arg1": "areaName",
+        "arg2": "level",
+        "arg3": "previousExperience",
+        "arg4": "currentExperience",
+        "arg5": "championPoints"
+    },
+    "EVENT_DISGUISE_STATE_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "disguiseState"
+    },
+    "EVENT_DISPLAY_ACTIVE_COMBAT_TIP": {
+        "arg1": "activeCombatTipId"
+    },
+    "EVENT_DISPLAY_ALERT": {
+        "arg1": "alertText",
+        "arg2": "soundId"
+    },
+    "EVENT_DISPLAY_ANNOUNCEMENT": {
+        "arg1": "primaryText",
+        "arg2": "secondaryText",
+        "arg3": "iconFilename",
+        "arg4": "soundId",
+        "arg5": "lifespanMS",
+        "arg6": "category"
+    },
+    "EVENT_DISPLAY_TUTORIAL": {
+        "arg1": "tutorialIndex"
+    },
+    "EVENT_DISPOSITION_UPDATE": {
+        "arg1": "unitTag"
+    },
+    "EVENT_DUEL_COUNTDOWN": {
+        "arg1": "startTimeMS"
+    },
+    "EVENT_DUEL_FINISHED": {
+        "arg1": "duelResult",
+        "arg2": "wasLocalPlayersResult",
+        "arg3": "opponentCharacterName",
+        "arg4": "opponentDisplayName",
+        "arg5": "opponentAlliance",
+        "arg6": "opponentGender",
+        "arg7": "opponentClassId",
+        "arg8": "opponentRaceId"
+    },
+    "EVENT_DUEL_INVITE_FAILED": {
+        "arg1": "reason",
+        "arg2": "targetCharacterName",
+        "arg3": "targetDisplayName"
+    },
+    "EVENT_DUEL_INVITE_RECEIVED": {
+        "arg1": "inviterCharacterName",
+        "arg2": "inviterDisplayName"
+    },
+    "EVENT_DUEL_INVITE_SENT": {
+        "arg1": "inviteeCharacterName",
+        "arg2": "inviteeDisplayName"
+    },
+    "EVENT_DUEL_NEAR_BOUNDARY": {
+        "arg1": "isInWarningArea"
+    },
+    "EVENT_DYE_STAMP_USE_FAIL": {
+        "arg1": "reason"
+    },
+    "EVENT_EFFECT_CHANGED": {
+        "arg1": "changeType",
+        "arg10": "effectType",
+        "arg11": "abilityType",
+        "arg12": "statusEffectType",
+        "arg13": "unitName",
+        "arg14": "unitId",
+        "arg15": "abilityId",
+        "arg16": "sourceType",
+        "arg2": "effectSlot",
+        "arg3": "effectName",
+        "arg4": "unitTag",
+        "arg5": "beginTime",
+        "arg6": "endTime",
+        "arg7": "stackCount",
+        "arg8": "iconName",
+        "arg9": "buffType"
+    },
+    "EVENT_END_CRAFTING_STATION_INTERACT": {
+        "arg1": "craftSkill"
+    },
+    "EVENT_ESO_PLUS_FREE_TRIAL_STATUS_CHANGED": {
+        "arg1": "hasFreeTrial"
+    },
+    "EVENT_EXPERIENCE_GAIN": {
+        "arg1": "reason",
+        "arg2": "level",
+        "arg3": "previousExperience",
+        "arg4": "currentExperience",
+        "arg5": "championPoints"
+    },
+    "EVENT_EXPERIENCE_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "currentExp",
+        "arg3": "maxExp",
+        "arg4": "reason"
+    },
+    "EVENT_FAST_TRAVEL_KEEP_NETWORK_LINK_CHANGED": {
+        "arg1": "linkIndex",
+        "arg2": "linkType",
+        "arg3": "owningAlliance",
+        "arg4": "oldLinkType",
+        "arg5": "oldOwningAlliance",
+        "arg6": "isLocal"
+    },
+    "EVENT_FAST_TRAVEL_NETWORK_UPDATED": {
+        "arg1": "nodeIndex"
+    },
+    "EVENT_FEEDBACK_REQUESTED": {
+        "arg1": "feedbackId"
+    },
+    "EVENT_FINESSE_RANK_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "rankNum",
+        "arg3": "name",
+        "arg4": "xpBonus",
+        "arg5": "loot"
+    },
+    "EVENT_FISHING_LURE_SET": {
+        "arg1": "fishingLure"
+    },
+    "EVENT_FOLLOWER_SCENE_FINISHED_FRAGMENT_TRANSITION": {
+        "arg1": "messageOrigin",
+        "arg2": "sceneName",
+        "arg3": "sequenceNumber"
+    },
+    "EVENT_FORCE_RESPEC": {
+        "arg1": "respecType"
+    },
+    "EVENT_FORWARD_CAMP_RESPAWN_TIMER_BEGINS": {
+        "arg1": "durationMS"
+    },
+    "EVENT_FRIEND_ADDED": {
+        "arg1": "displayName"
+    },
+    "EVENT_FRIEND_CHARACTER_CHAMPION_POINTS_CHANGED": {
+        "arg1": "displayName",
+        "arg2": "characterName",
+        "arg3": "championRank"
+    },
+    "EVENT_FRIEND_CHARACTER_LEVEL_CHANGED": {
+        "arg1": "displayName",
+        "arg2": "characterName",
+        "arg3": "level"
+    },
+    "EVENT_FRIEND_CHARACTER_UPDATED": {
+        "arg1": "displayName"
+    },
+    "EVENT_FRIEND_CHARACTER_ZONE_CHANGED": {
+        "arg1": "displayName",
+        "arg2": "characterName",
+        "arg3": "zoneName"
+    },
+    "EVENT_FRIEND_DISPLAY_NAME_CHANGED": {
+        "arg1": "oldDisplayName",
+        "arg2": "newDisplayName"
+    },
+    "EVENT_FRIEND_NOTE_UPDATED": {
+        "arg1": "displayName",
+        "arg2": "note"
+    },
+    "EVENT_FRIEND_PLAYER_STATUS_CHANGED": {
+        "arg1": "displayName",
+        "arg2": "characterName",
+        "arg3": "oldStatus",
+        "arg4": "newStatus"
+    },
+    "EVENT_FRIEND_REMOVED": {
+        "arg1": "displayName"
+    },
+    "EVENT_GAMEPAD_PREFERRED_MODE_CHANGED": {
+        "arg1": "gamepadPreferred"
+    },
+    "EVENT_GAMEPAD_TYPE_CHANGED": {
+        "arg1": "gamepadType"
+    },
+    "EVENT_GAME_FOCUS_CHANGED": {
+        "arg1": "hasFocus"
+    },
+    "EVENT_GIFTING_UNLOCKED_STATUS_CHANGED": {
+        "arg1": "isGiftingUnlocked"
+    },
+    "EVENT_GIFT_ACTION_RESULT": {
+        "arg1": "action",
+        "arg2": "result",
+        "arg3": "giftId"
+    },
+    "EVENT_GLOBAL_MOUSE_DOWN": {
+        "arg1": "button",
+        "arg2": "ctrl",
+        "arg3": "alt",
+        "arg4": "shift",
+        "arg5": "command"
+    },
+    "EVENT_GLOBAL_MOUSE_UP": {
+        "arg1": "button",
+        "arg2": "ctrl",
+        "arg3": "alt",
+        "arg4": "shift",
+        "arg5": "command"
+    },
+    "EVENT_GROUPING_TOOLS_LFG_JOINED": {
+        "arg1": "locationName"
+    },
+    "EVENT_GROUPING_TOOLS_READY_CHECK_CANCELLED": {
+        "arg1": "reason"
+    },
+    "EVENT_GROUP_ELECTION_FAILED": {
+        "arg1": "failureReason",
+        "arg2": "descriptor"
+    },
+    "EVENT_GROUP_ELECTION_REQUESTED": {
+        "arg1": "descriptor"
+    },
+    "EVENT_GROUP_ELECTION_RESULT": {
+        "arg1": "electionResult",
+        "arg2": "descriptor"
+    },
+    "EVENT_GROUP_INVITE_RECEIVED": {
+        "arg1": "inviterCharacterName",
+        "arg2": "inviterDisplayName"
+    },
+    "EVENT_GROUP_INVITE_RESPONSE": {
+        "arg1": "inviterName",
+        "arg2": "response",
+        "arg3": "inviterDisplayName"
+    },
+    "EVENT_GROUP_MEMBER_CONNECTED_STATUS": {
+        "arg1": "unitTag",
+        "arg2": "isOnline"
+    },
+    "EVENT_GROUP_MEMBER_IN_REMOTE_REGION": {
+        "arg1": "unitTag",
+        "arg2": "isInRemoteRegion"
+    },
+    "EVENT_GROUP_MEMBER_JOINED": {
+        "arg1": "memberCharacterName",
+        "arg2": "memberDisplayName",
+        "arg3": "isLocalPlayer"
+    },
+    "EVENT_GROUP_MEMBER_LEFT": {
+        "arg1": "memberCharacterName",
+        "arg2": "reason",
+        "arg3": "isLocalPlayer",
+        "arg4": "isLeader",
+        "arg5": "memberDisplayName",
+        "arg6": "actionRequiredVote"
+    },
+    "EVENT_GROUP_MEMBER_ROLE_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "newRole"
+    },
+    "EVENT_GROUP_NOTIFICATION_MESSAGE": {
+        "arg1": "messageId"
+    },
+    "EVENT_GROUP_OPERATION_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_GROUP_SUPPORT_RANGE_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "status"
+    },
+    "EVENT_GROUP_TYPE_CHANGED": {
+        "arg1": "largeGroup"
+    },
+    "EVENT_GROUP_VETERAN_DIFFICULTY_CHANGED": {
+        "arg1": "isVeteranDifficulty"
+    },
+    "EVENT_GUILD_BANKED_MONEY_UPDATE": {
+        "arg1": "newBankedMoney",
+        "arg2": "oldBankedMoney"
+    },
+    "EVENT_GUILD_BANK_ITEM_ADDED": {
+        "arg1": "slotId",
+        "arg2": "addedByLocalPlayer",
+        "arg3": "itemSoundCategory",
+        "arg4": "isLastUpdateForMessage"
+    },
+    "EVENT_GUILD_BANK_ITEM_REMOVED": {
+        "arg1": "slotId",
+        "arg2": "addedByLocalPlayer",
+        "arg3": "itemSoundCategory",
+        "arg4": "isLastUpdateForMessage"
+    },
+    "EVENT_GUILD_BANK_OPEN_ERROR": {
+        "arg1": "reason"
+    },
+    "EVENT_GUILD_BANK_SELECTED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_BANK_TRANSFER_ERROR": {
+        "arg1": "reason"
+    },
+    "EVENT_GUILD_BANK_UPDATED_QUANTITY": {
+        "arg1": "slotId"
+    },
+    "EVENT_GUILD_CLAIM_KEEP_CAMPAIGN_NOTIFICATION": {
+        "arg1": "campaignId",
+        "arg2": "keepId",
+        "arg3": "guildName",
+        "arg4": "playerName"
+    },
+    "EVENT_GUILD_CLAIM_KEEP_RESPONSE": {
+        "arg1": "response",
+        "arg2": "keepId"
+    },
+    "EVENT_GUILD_DESCRIPTION_CHANGED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_FINDER_APPLICATION_RESPONSE": {
+        "arg1": "guildId",
+        "arg2": "result"
+    },
+    "EVENT_GUILD_FINDER_APPLICATION_RESULTS_GUILD": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_FINDER_BLACKLIST_RESPONSE": {
+        "arg1": "guildId",
+        "arg2": "accountName",
+        "arg3": "result"
+    },
+    "EVENT_GUILD_FINDER_GUILD_APPLICATIONS_VIEWED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_FINDER_GUILD_NEW_APPLICATIONS": {
+        "arg1": "guildId",
+        "arg2": "numApplications"
+    },
+    "EVENT_GUILD_FINDER_PLAYER_APPLICATIONS_CHANGED": {
+        "arg1": "numApplications"
+    },
+    "EVENT_GUILD_FINDER_PROCESS_APPLICATION_RESPONSE": {
+        "arg1": "guildId",
+        "arg2": "accountName",
+        "arg3": "result"
+    },
+    "EVENT_GUILD_FINDER_SEARCH_COMPLETE": {
+        "arg1": "searchId"
+    },
+    "EVENT_GUILD_FINDER_SEARCH_COOLDOWN_UPDATE": {
+        "arg1": "cooldownMs"
+    },
+    "EVENT_GUILD_HISTORY_CATEGORY_UPDATED": {
+        "arg1": "guildId",
+        "arg2": "category"
+    },
+    "EVENT_GUILD_HISTORY_RESPONSE_RECEIVED": {
+        "arg1": "guildId",
+        "arg2": "category"
+    },
+    "EVENT_GUILD_ID_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "oldGuildId",
+        "arg3": "newGuildId"
+    },
+    "EVENT_GUILD_INFO_REQUEST_COMPLETE": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_INVITE_ADDED": {
+        "arg1": "guildId",
+        "arg2": "guildName",
+        "arg3": "guildAlliance",
+        "arg4": "inviterDisplayName"
+    },
+    "EVENT_GUILD_INVITE_PLAYER_SUCCESSFUL": {
+        "arg1": "playerName",
+        "arg2": "guildId"
+    },
+    "EVENT_GUILD_INVITE_REMOVED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_INVITE_TO_BLACKLISTED_PLAYER": {
+        "arg1": "playerName",
+        "arg2": "guildId"
+    },
+    "EVENT_GUILD_KEEP_CLAIM_UPDATED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_KIOSK_ACTIVE_BIDS_RESPONSE": {
+        "arg1": "guildId",
+        "arg2": "result"
+    },
+    "EVENT_GUILD_KIOSK_ERROR": {
+        "arg1": "reason"
+    },
+    "EVENT_GUILD_KIOSK_RESULT": {
+        "arg1": "guildKioskResult"
+    },
+    "EVENT_GUILD_LEVEL_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "level"
+    },
+    "EVENT_GUILD_LOST_KEEP_CAMPAIGN_NOTIFICATION": {
+        "arg1": "campaignId",
+        "arg2": "keepId",
+        "arg3": "guildName"
+    },
+    "EVENT_GUILD_MEMBER_ADDED": {
+        "arg1": "guildId",
+        "arg2": "displayName"
+    },
+    "EVENT_GUILD_MEMBER_CHARACTER_CHAMPION_POINTS_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "characterName",
+        "arg4": "championRank"
+    },
+    "EVENT_GUILD_MEMBER_CHARACTER_LEVEL_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "characterName",
+        "arg4": "level"
+    },
+    "EVENT_GUILD_MEMBER_CHARACTER_UPDATED": {
+        "arg1": "guildId",
+        "arg2": "displayName"
+    },
+    "EVENT_GUILD_MEMBER_CHARACTER_ZONE_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "characterName",
+        "arg4": "zone"
+    },
+    "EVENT_GUILD_MEMBER_DEMOTE_SUCCESSFUL": {
+        "arg1": "playerName",
+        "arg2": "newRankIndex",
+        "arg3": "guildId"
+    },
+    "EVENT_GUILD_MEMBER_NOTE_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "note"
+    },
+    "EVENT_GUILD_MEMBER_PLAYER_STATUS_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "oldStatus",
+        "arg4": "newStatus"
+    },
+    "EVENT_GUILD_MEMBER_PROMOTE_SUCCESSFUL": {
+        "arg1": "playerName",
+        "arg2": "newRankIndex",
+        "arg3": "guildId"
+    },
+    "EVENT_GUILD_MEMBER_RANK_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "rankIndex"
+    },
+    "EVENT_GUILD_MEMBER_REMOVED": {
+        "arg1": "guildId",
+        "arg2": "displayName",
+        "arg3": "characterName"
+    },
+    "EVENT_GUILD_MOTD_CHANGED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_PLAYER_RANK_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "rankIndex",
+        "arg3": "guildRankChangeAction"
+    },
+    "EVENT_GUILD_RANKS_CHANGED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_RANK_CHANGED": {
+        "arg1": "guildId",
+        "arg2": "rankIndex"
+    },
+    "EVENT_GUILD_RECRUITMENT_INFO_UPDATED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUILD_RELEASE_KEEP_CAMPAIGN_NOTIFICATION": {
+        "arg1": "campaignId",
+        "arg2": "keepId",
+        "arg3": "guildName",
+        "arg4": "playerName"
+    },
+    "EVENT_GUILD_RELEASE_KEEP_RESPONSE": {
+        "arg1": "response"
+    },
+    "EVENT_GUILD_SELF_JOINED_GUILD": {
+        "arg1": "guildServerId",
+        "arg2": "characterName",
+        "arg3": "guildId"
+    },
+    "EVENT_GUILD_SELF_LEFT_GUILD": {
+        "arg1": "guildServerId",
+        "arg2": "characterName",
+        "arg3": "guildId"
+    },
+    "EVENT_GUILD_TRADER_HIRED_UPDATED": {
+        "arg1": "guildId"
+    },
+    "EVENT_GUI_HIDDEN": {
+        "arg1": "guiName",
+        "arg2": "hidden"
+    },
+    "EVENT_GUI_WORLD_PARTICLE_EFFECT_READY": {
+        "arg1": "particleEffectId"
+    },
+    "EVENT_HERON_URL_REQUESTED": {
+        "arg1": "urlString"
+    },
+    "EVENT_HOME_SHOW_LEADERBOARD_DATA_CHANGED": {
+        "arg1": "voteCategory",
+        "arg2": "houseCategory"
+    },
+    "EVENT_HOTBAR_SLOT_CHANGE_REQUESTED": {
+        "arg1": "newAbilityId",
+        "arg2": "actionSlotIndex",
+        "arg3": "hotbarCategory"
+    },
+    "EVENT_HOTBAR_SLOT_STATE_UPDATED": {
+        "arg1": "actionSlotIndex",
+        "arg2": "hotbarCategory"
+    },
+    "EVENT_HOTBAR_SLOT_UPDATED": {
+        "arg1": "actionSlotIndex",
+        "arg2": "hotbarCategory",
+        "arg3": "justUnlocked"
+    },
+    "EVENT_HOT_BAR_RESULT": {
+        "arg1": "reason"
+    },
+    "EVENT_HOUSING_ADD_PERMISSIONS_FAILED": {
+        "arg1": "userGroup",
+        "arg2": "attemptedName"
+    },
+    "EVENT_HOUSING_EDITOR_COMMAND_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_HOUSING_EDITOR_MODE_CHANGED": {
+        "arg1": "oldMode",
+        "arg2": "newMode"
+    },
+    "EVENT_HOUSING_EDITOR_REQUEST_RESULT": {
+        "arg1": "requestResult"
+    },
+    "EVENT_HOUSING_FURNITURE_MOVED": {
+        "arg1": "furnitureId"
+    },
+    "EVENT_HOUSING_FURNITURE_PATH_DATA_CHANGED": {
+        "arg1": "furnitureId"
+    },
+    "EVENT_HOUSING_FURNITURE_PATH_NODES_RESTORED": {
+        "arg1": "furnitureId"
+    },
+    "EVENT_HOUSING_FURNITURE_PATH_NODE_ADDED": {
+        "arg1": "furnitureId",
+        "arg2": "pathIndex"
+    },
+    "EVENT_HOUSING_FURNITURE_PATH_NODE_MOVED": {
+        "arg1": "furnitureId",
+        "arg2": "pathIndex"
+    },
+    "EVENT_HOUSING_FURNITURE_PATH_NODE_REMOVED": {
+        "arg1": "furnitureId",
+        "arg2": "pathIndex"
+    },
+    "EVENT_HOUSING_FURNITURE_PATH_STARTING_NODE_INDEX_CHANGED": {
+        "arg1": "furnitureId",
+        "arg2": "startingPathIndex"
+    },
+    "EVENT_HOUSING_FURNITURE_PLACED": {
+        "arg1": "furnitureId",
+        "arg2": "collectibleId"
+    },
+    "EVENT_HOUSING_FURNITURE_REMOVED": {
+        "arg1": "furnitureId",
+        "arg2": "collectibleId"
+    },
+    "EVENT_HOUSING_LOAD_PERMISSIONS_RESULT": {
+        "arg1": "loadResult"
+    },
+    "EVENT_HOUSING_PERMISSIONS_CHANGED": {
+        "arg1": "userGroup"
+    },
+    "EVENT_HOUSING_PLAYER_INFO_CHANGED": {
+        "arg1": "wasOwner",
+        "arg2": "permissionsChanged",
+        "arg3": "oldVisitorRole"
+    },
+    "EVENT_HOUSING_POPULATION_CHANGED": {
+        "arg1": "newPopulation"
+    },
+    "EVENT_HOUSING_PRIMARY_RESIDENCE_SET": {
+        "arg1": "houseId"
+    },
+    "EVENT_IGNORE_ADDED": {
+        "arg1": "displayName"
+    },
+    "EVENT_IGNORE_NOTE_UPDATED": {
+        "arg1": "displayName",
+        "arg2": "note"
+    },
+    "EVENT_IGNORE_ONLINE_CHARACTER_CHANGED": {
+        "arg1": "displayName"
+    },
+    "EVENT_IGNORE_REMOVED": {
+        "arg1": "displayName"
+    },
+    "EVENT_INCOMING_FRIEND_INVITE_ADDED": {
+        "arg1": "displayName"
+    },
+    "EVENT_INCOMING_FRIEND_INVITE_NOTE_UPDATED": {
+        "arg1": "displayName",
+        "arg2": "message"
+    },
+    "EVENT_INCOMING_FRIEND_INVITE_REMOVED": {
+        "arg1": "displayName"
+    },
+    "EVENT_INSTANCE_KICK_TIME_UPDATE": {
+        "arg1": "timeRemainingMs"
+    },
+    "EVENT_INTERACTION_ENDED": {
+        "arg1": "interactType",
+        "arg2": "cancelContext"
+    },
+    "EVENT_INTERFACE_SETTING_CHANGED": {
+        "arg1": "settingSystemType",
+        "arg2": "settingId"
+    },
+    "EVENT_INVENTORY_BAG_CAPACITY_CHANGED": {
+        "arg1": "previousCapacity",
+        "arg2": "currentCapacity",
+        "arg3": "previousUpgrade",
+        "arg4": "currentUpgrade"
+    },
+    "EVENT_INVENTORY_BANK_CAPACITY_CHANGED": {
+        "arg1": "previousCapacity",
+        "arg2": "currentCapacity",
+        "arg3": "previousUpgrade",
+        "arg4": "currentUpgrade"
+    },
+    "EVENT_INVENTORY_BOUGHT_BAG_SPACE": {
+        "arg1": "numberOfSlots"
+    },
+    "EVENT_INVENTORY_BOUGHT_BANK_SPACE": {
+        "arg1": "numberOfSlots"
+    },
+    "EVENT_INVENTORY_BUY_BAG_SPACE": {
+        "arg1": "cost"
+    },
+    "EVENT_INVENTORY_BUY_BANK_SPACE": {
+        "arg1": "cost"
+    },
+    "EVENT_INVENTORY_EQUIP_MYTHIC_FAILED": {
+        "arg1": "bagId",
+        "arg2": "slotContainingMythicId"
+    },
+    "EVENT_INVENTORY_IS_FULL": {
+        "arg1": "numSlotsRequested",
+        "arg2": "numSlotsFree"
+    },
+    "EVENT_INVENTORY_ITEM_DESTROYED": {
+        "arg1": "itemSoundCategory"
+    },
+    "EVENT_INVENTORY_ITEM_USED": {
+        "arg1": "itemSoundCategory"
+    },
+    "EVENT_INVENTORY_SINGLE_SLOT_UPDATE": {
+        "arg1": "bagId",
+        "arg2": "slotId",
+        "arg3": "isNewItem",
+        "arg4": "itemSoundCategory",
+        "arg5": "inventoryUpdateReason",
+        "arg6": "stackCountChange",
+        "arg7": "triggeredByCharacterName",
+        "arg8": "triggeredByDisplayName",
+        "arg9": "isLastUpdateForMessage"
+    },
+    "EVENT_INVENTORY_SLOT_LOCKED": {
+        "arg1": "bagId",
+        "arg2": "slotId"
+    },
+    "EVENT_INVENTORY_SLOT_UNLOCKED": {
+        "arg1": "bagId",
+        "arg2": "slotId"
+    },
+    "EVENT_ITEM_COMBINATION_RESULT": {
+        "arg1": "itemCombinationResult"
+    },
+    "EVENT_ITEM_LAUNDER_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_ITEM_REPAIR_FAILURE": {
+        "arg1": "reason"
+    },
+    "EVENT_ITEM_SET_COLLECTION_SLOT_NEW_STATUS_CLEARED": {
+        "arg1": "itemSetId",
+        "arg2": "itemSetCollectionSlot"
+    },
+    "EVENT_ITEM_SET_COLLECTION_UPDATED": {
+        "arg1": "itemSetId",
+        "arg2": "slotsJustUnlockedMask"
+    },
+    "EVENT_ITEM_SLOT_CHANGED": {
+        "arg1": "itemSoundCategory"
+    },
+    "EVENT_JUMP_FAILED": {
+        "arg1": "reason"
+    },
+    "EVENT_JUSTICE_BEING_ARRESTED": {
+        "arg1": "quitGame"
+    },
+    "EVENT_JUSTICE_BOUNTY_PAYOFF_AMOUNT_UPDATED": {
+        "arg1": "oldBounty",
+        "arg2": "newBounty",
+        "arg3": "isInitialize"
+    },
+    "EVENT_JUSTICE_FENCE_UPDATE": {
+        "arg1": "sellsUsed",
+        "arg2": "laundersUsed"
+    },
+    "EVENT_JUSTICE_GOLD_PICKPOCKETED": {
+        "arg1": "goldAmount"
+    },
+    "EVENT_JUSTICE_GOLD_REMOVED": {
+        "arg1": "goldAmount"
+    },
+    "EVENT_JUSTICE_INFAMY_UPDATED": {
+        "arg1": "oldInfamy",
+        "arg2": "newInfamy",
+        "arg3": "oldInfamyLevel",
+        "arg4": "newInfamyLevel"
+    },
+    "EVENT_KEEP_ALLIANCE_OWNER_CHANGED": {
+        "arg1": "keepId",
+        "arg2": "battlegroundContext",
+        "arg3": "owningAlliance",
+        "arg4": "oldOwningAlliance"
+    },
+    "EVENT_KEEP_GATE_STATE_CHANGED": {
+        "arg1": "keepId",
+        "arg2": "open"
+    },
+    "EVENT_KEEP_GUILD_CLAIM_UPDATE": {
+        "arg1": "keepId",
+        "arg2": "battlegroundContext"
+    },
+    "EVENT_KEEP_INITIALIZED": {
+        "arg1": "keepId",
+        "arg2": "battlegroundContext"
+    },
+    "EVENT_KEEP_IS_PASSABLE_CHANGED": {
+        "arg1": "keepId",
+        "arg2": "battlegroundContext",
+        "arg3": "isPassable"
+    },
+    "EVENT_KEEP_PIECE_DIRECTIONAL_ACCESS_CHANGED": {
+        "arg1": "keepId",
+        "arg2": "battlegroundContext",
+        "arg3": "directionalAccess"
+    },
+    "EVENT_KEEP_RESOURCE_UPDATE": {
+        "arg1": "keepId"
+    },
+    "EVENT_KEEP_UNDER_ATTACK_CHANGED": {
+        "arg1": "keepId",
+        "arg2": "battlegroundContext",
+        "arg3": "underAttack"
+    },
+    "EVENT_KEYBINDING_CLEARED": {
+        "arg1": "layerIndex",
+        "arg2": "categoryIndex",
+        "arg3": "actionIndex",
+        "arg4": "bindingIndex"
+    },
+    "EVENT_KEYBINDING_SET": {
+        "arg1": "layerIndex",
+        "arg2": "categoryIndex",
+        "arg3": "actionIndex",
+        "arg4": "bindingIndex",
+        "arg5": "keyCode",
+        "arg6": "mod1",
+        "arg7": "mod2",
+        "arg8": "mod3",
+        "arg9": "mod4"
+    },
+    "EVENT_LEADER_TO_FOLLOWER_SYNC": {
+        "arg1": "messageOrigin",
+        "arg2": "syncType",
+        "arg3": "currentSceneName",
+        "arg4": "nextSceneName",
+        "arg5": "sequenceNumber",
+        "arg6": "currentSceneFragmentsComplete"
+    },
+    "EVENT_LEADER_UPDATE": {
+        "arg1": "leaderTag"
+    },
+    "EVENT_LEAVE_CAMPAIGN_QUEUE_RESPONSE": {
+        "arg1": "response"
+    },
+    "EVENT_LEVEL_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "level"
+    },
+    "EVENT_LOCKPICK_BROKE": {
+        "arg1": "inactivityLengthMs"
+    },
+    "EVENT_LOGOUT_DEFERRED": {
+        "arg1": "deferMilliseconds",
+        "arg2": "quitRequested"
+    },
+    "EVENT_LOGOUT_DISALLOWED": {
+        "arg1": "quitRequested"
+    },
+    "EVENT_LOOT_ITEM_FAILED": {
+        "arg1": "reason",
+        "arg2": "itemLink"
+    },
+    "EVENT_LOOT_RECEIVED": {
+        "arg1": "receivedBy",
+        "arg10": "isStolen",
+        "arg2": "itemName",
+        "arg3": "quantity",
+        "arg4": "soundCategory",
+        "arg5": "lootType",
+        "arg6": "self",
+        "arg7": "isPickpocketLoot",
+        "arg8": "questItemIcon",
+        "arg9": "itemId"
+    },
+    "EVENT_LORE_BOOK_ALREADY_KNOWN": {
+        "arg1": "bookTitle"
+    },
+    "EVENT_LORE_BOOK_LEARNED": {
+        "arg1": "categoryIndex",
+        "arg2": "collectionIndex",
+        "arg3": "bookIndex",
+        "arg4": "guildIndex",
+        "arg5": "isMaxRank"
+    },
+    "EVENT_LORE_BOOK_LEARNED_SKILL_EXPERIENCE": {
+        "arg1": "categoryIndex",
+        "arg2": "collectionIndex",
+        "arg3": "bookIndex",
+        "arg4": "guildIndex",
+        "arg5": "skillType",
+        "arg6": "skillLineIndex",
+        "arg7": "rank",
+        "arg8": "previousXP",
+        "arg9": "currentXP"
+    },
+    "EVENT_LORE_COLLECTION_COMPLETED": {
+        "arg1": "categoryIndex",
+        "arg2": "collectionIndex",
+        "arg3": "guildIndex",
+        "arg4": "isMaxRank"
+    },
+    "EVENT_LORE_COLLECTION_COMPLETED_SKILL_EXPERIENCE": {
+        "arg1": "categoryIndex",
+        "arg2": "collectionIndex",
+        "arg3": "guildIndex",
+        "arg4": "skillType",
+        "arg5": "skillLineIndex",
+        "arg6": "rank",
+        "arg7": "previousXP",
+        "arg8": "currentXP"
+    },
+    "EVENT_LUA_ERROR": {
+        "arg1": "error"
+    },
+    "EVENT_MAIL_ATTACHED_MONEY_CHANGED": {
+        "arg1": "moneyAmount"
+    },
+    "EVENT_MAIL_ATTACHMENT_ADDED": {
+        "arg1": "attachmentSlot"
+    },
+    "EVENT_MAIL_ATTACHMENT_REMOVED": {
+        "arg1": "attachmentSlot"
+    },
+    "EVENT_MAIL_COD_CHANGED": {
+        "arg1": "codAmount"
+    },
+    "EVENT_MAIL_NUM_UNREAD_CHANGED": {
+        "arg1": "numUnread"
+    },
+    "EVENT_MAIL_READABLE": {
+        "arg1": "mailId"
+    },
+    "EVENT_MAIL_REMOVED": {
+        "arg1": "mailId"
+    },
+    "EVENT_MAIL_SEND_FAILED": {
+        "arg1": "reason"
+    },
+    "EVENT_MAIL_SEND_SUCCESS": {
+        "arg1": "playerName"
+    },
+    "EVENT_MAIL_TAKE_ATTACHED_ITEM_SUCCESS": {
+        "arg1": "mailId"
+    },
+    "EVENT_MAIL_TAKE_ATTACHED_MONEY_SUCCESS": {
+        "arg1": "mailId"
+    },
+    "EVENT_MAP_PING": {
+        "arg1": "pingEventType",
+        "arg2": "pingType",
+        "arg3": "pingTag",
+        "arg4": "offsetX",
+        "arg5": "offsetY",
+        "arg6": "isLocalPlayerOwner"
+    },
+    "EVENT_MARKET_ANNOUNCEMENT_UPDATED": {
+        "arg1": "shouldShow",
+        "arg2": "isLocked"
+    },
+    "EVENT_MARKET_PRODUCT_AVAILABILITY_UPDATED": {
+        "arg1": "displayGroup"
+    },
+    "EVENT_MARKET_PURCHASE_RESULT": {
+        "arg1": "purchaseResult",
+        "arg2": "tutorialTrigger",
+        "arg3": "wasGift"
+    },
+    "EVENT_MARKET_STATE_UPDATED": {
+        "arg1": "displayGroup",
+        "arg2": "marketState"
+    },
+    "EVENT_MATCH_TRADING_HOUSE_ITEM_NAMES_COMPLETE": {
+        "arg1": "id",
+        "arg2": "numResults",
+        "arg3": "backgroundDurationMS"
+    },
+    "EVENT_MEDAL_AWARDED": {
+        "arg1": "medalId",
+        "arg2": "name",
+        "arg3": "iconFilename",
+        "arg4": "value"
+    },
+    "EVENT_MONEY_UPDATE": {
+        "arg1": "newMoney",
+        "arg2": "oldMoney",
+        "arg3": "reason",
+        "arg4": "reasonSupplementaryInfo"
+    },
+    "EVENT_MOST_RECENT_GAMEPAD_TYPE_CHANGED": {
+        "arg1": "mostRecentGamepadType"
+    },
+    "EVENT_MOUNTED_STATE_CHANGED": {
+        "arg1": "mounted"
+    },
+    "EVENT_MOUNT_FAILURE": {
+        "arg1": "reason",
+        "arg2": "arg1"
+    },
+    "EVENT_MOUSE_REQUEST_ABANDON_QUEST": {
+        "arg1": "journalIndex",
+        "arg2": "name"
+    },
+    "EVENT_MOUSE_REQUEST_DESTROY_ITEM": {
+        "arg1": "bagId",
+        "arg2": "slotIndex",
+        "arg3": "itemCount",
+        "arg4": "name",
+        "arg5": "needsConfirm"
+    },
+    "EVENT_MOUSE_REQUEST_DESTROY_ITEM_FAILED": {
+        "arg1": "bagId",
+        "arg2": "slotIndex",
+        "arg3": "itemCount",
+        "arg4": "name",
+        "arg5": "reason"
+    },
+    "EVENT_MULTIPLE_RECIPES_LEARNED": {
+        "arg1": "numRecipesUnlocked"
+    },
+    "EVENT_MURDERBALL_STATE_CHANGED": {
+        "arg1": "objectiveKeepId",
+        "arg10": "holderDisplayName",
+        "arg11": "lastHolderRawCharacterName",
+        "arg12": "lastHolderDisplayName",
+        "arg13": "pinType",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "objectiveName",
+        "arg5": "objectiveControlEvent",
+        "arg6": "objectiveControlState",
+        "arg7": "holderAlliance",
+        "arg8": "lastHolderAlliance",
+        "arg9": "holderRawCharacterName"
+    },
+    "EVENT_NON_COMBAT_BONUS_CHANGED": {
+        "arg1": "nonCombatBonus",
+        "arg2": "oldValue",
+        "arg3": "newValue"
+    },
+    "EVENT_OBJECTIVE_COMPLETED": {
+        "arg1": "zoneIndex",
+        "arg2": "poiIndex",
+        "arg3": "level",
+        "arg4": "previousExperience",
+        "arg5": "currentExperience",
+        "arg6": "championPoints"
+    },
+    "EVENT_OBJECTIVE_CONTROL_STATE": {
+        "arg1": "objectiveKeepId",
+        "arg10": "pinType",
+        "arg2": "objectiveObjectiveId",
+        "arg3": "battlegroundContext",
+        "arg4": "objectiveName",
+        "arg5": "objectiveType",
+        "arg6": "objectiveControlEvent",
+        "arg7": "objectiveControlState",
+        "arg8": "objectiveParam1",
+        "arg9": "objectiveParam2"
+    },
+    "EVENT_OPEN_BANK": {
+        "arg1": "bankBag"
+    },
+    "EVENT_OPEN_FENCE": {
+        "arg1": "allowSell",
+        "arg2": "allowLaunder"
+    },
+    "EVENT_OPEN_UI_SYSTEM": {
+        "arg1": "system",
+        "arg2": "param1"
+    },
+    "EVENT_OUTFIT_CHANGE_RESPONSE": {
+        "arg1": "response",
+        "arg2": "actorCategory",
+        "arg3": "outfitIndex"
+    },
+    "EVENT_OUTFIT_EQUIP_RESPONSE": {
+        "arg1": "actorCategory",
+        "arg2": "response"
+    },
+    "EVENT_OUTFIT_RENAME_RESPONSE": {
+        "arg1": "response",
+        "arg2": "actorCategory",
+        "arg3": "outfitIndex"
+    },
+    "EVENT_OUTGOING_FRIEND_INVITE_ADDED": {
+        "arg1": "displayName"
+    },
+    "EVENT_OUTGOING_FRIEND_INVITE_REMOVED": {
+        "arg1": "displayName"
+    },
+    "EVENT_PLAYER_ACTIVATED": {
+        "arg1": "initial"
+    },
+    "EVENT_PLAYER_ACTIVELY_ENGAGED_STATE": {
+        "arg1": "isActivelyEngaged"
+    },
+    "EVENT_PLAYER_COMBAT_STATE": {
+        "arg1": "inCombat"
+    },
+    "EVENT_PLAYER_EMOTE_FAILED_PLAY": {
+        "arg1": "failure"
+    },
+    "EVENT_PLAYER_IN_PIN_AREA_CHANGED": {
+        "arg1": "pinType",
+        "arg2": "param1",
+        "arg3": "param2",
+        "arg4": "param3",
+        "arg5": "playerIsInside"
+    },
+    "EVENT_PLAYER_STATUS_CHANGED": {
+        "arg1": "oldStatus",
+        "arg2": "newStatus"
+    },
+    "EVENT_PLAYER_STUNNED_STATE_CHANGED": {
+        "arg1": "playerStunned"
+    },
+    "EVENT_PLEDGE_OF_MARA_OFFER": {
+        "arg1": "targetCharacterName",
+        "arg2": "isSender",
+        "arg3": "targetDisplayName"
+    },
+    "EVENT_PLEDGE_OF_MARA_RESULT": {
+        "arg1": "reason",
+        "arg2": "targetCharacterName",
+        "arg3": "targetDisplayName"
+    },
+    "EVENT_POI_DISCOVERED": {
+        "arg1": "zoneIndex",
+        "arg2": "poiIndex"
+    },
+    "EVENT_POI_UPDATED": {
+        "arg1": "zoneIndex",
+        "arg2": "poiIndex"
+    },
+    "EVENT_POWER_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "powerIndex",
+        "arg3": "powerType",
+        "arg4": "powerValue",
+        "arg5": "powerMax",
+        "arg6": "powerEffectiveMax"
+    },
+    "EVENT_PREPARE_FOR_JUMP": {
+        "arg1": "zoneName",
+        "arg2": "zoneDescription",
+        "arg3": "loadingTexture",
+        "arg4": "instanceDisplayType"
+    },
+    "EVENT_QUEST_ADDED": {
+        "arg1": "journalIndex",
+        "arg2": "questName",
+        "arg3": "objectiveName"
+    },
+    "EVENT_QUEST_ADVANCED": {
+        "arg1": "journalIndex",
+        "arg2": "questName",
+        "arg3": "isPushed",
+        "arg4": "isComplete",
+        "arg5": "mainStepChanged"
+    },
+    "EVENT_QUEST_COMPLETE": {
+        "arg1": "questName",
+        "arg2": "level",
+        "arg3": "previousExperience",
+        "arg4": "currentExperience",
+        "arg5": "championPoints",
+        "arg6": "questType",
+        "arg7": "instanceDisplayType"
+    },
+    "EVENT_QUEST_COMPLETE_DIALOG": {
+        "arg1": "journalIndex"
+    },
+    "EVENT_QUEST_CONDITION_COUNTER_CHANGED": {
+        "arg1": "journalIndex",
+        "arg10": "isPushed",
+        "arg11": "isComplete",
+        "arg12": "isConditionComplete",
+        "arg13": "isStepHidden",
+        "arg14": "isConditionCompleteStatusChanged",
+        "arg15": "isConditionCompletableBySiblingStatusChanged",
+        "arg2": "questName",
+        "arg3": "conditionText",
+        "arg4": "conditionType",
+        "arg5": "currConditionVal",
+        "arg6": "newConditionVal",
+        "arg7": "conditionMax",
+        "arg8": "isFailCondition",
+        "arg9": "stepOverrideText"
+    },
+    "EVENT_QUEST_CONDITION_OVERRIDE_TEXT_CHANGED": {
+        "arg1": "journalIndex"
+    },
+    "EVENT_QUEST_OPTIONAL_STEP_ADVANCED": {
+        "arg1": "text"
+    },
+    "EVENT_QUEST_POSITION_REQUEST_COMPLETE": {
+        "arg1": "taskId",
+        "arg2": "pinType",
+        "arg3": "xLoc",
+        "arg4": "yLoc",
+        "arg5": "areaRadius",
+        "arg6": "insideCurrentMapWorld",
+        "arg7": "isBreadcrumb"
+    },
+    "EVENT_QUEST_REMOVED": {
+        "arg1": "isCompleted",
+        "arg2": "journalIndex",
+        "arg3": "questName",
+        "arg4": "zoneIndex",
+        "arg5": "poiIndex",
+        "arg6": "questID"
+    },
+    "EVENT_QUEST_SHARED": {
+        "arg1": "questId"
+    },
+    "EVENT_QUEST_SHARE_REMOVED": {
+        "arg1": "questId"
+    },
+    "EVENT_QUEST_SHARE_RESULT": {
+        "arg1": "shareTargetCharacterName",
+        "arg2": "shareTargetDisplayName",
+        "arg3": "questName",
+        "arg4": "result"
+    },
+    "EVENT_QUEST_SHOW_JOURNAL_ENTRY": {
+        "arg1": "journalIndex"
+    },
+    "EVENT_QUEST_TIMER_PAUSED": {
+        "arg1": "journalIndex",
+        "arg2": "isPaused"
+    },
+    "EVENT_QUEST_TIMER_UPDATED": {
+        "arg1": "journalIndex"
+    },
+    "EVENT_QUEST_TOOL_UPDATED": {
+        "arg1": "journalIndex",
+        "arg2": "questName",
+        "arg3": "countDelta",
+        "arg4": "iconFilename",
+        "arg5": "questItemId",
+        "arg6": "name"
+    },
+    "EVENT_QUEUE_FOR_CAMPAIGN_RESPONSE": {
+        "arg1": "response"
+    },
+    "EVENT_RAID_REVIVE_COUNTER_UPDATE": {
+        "arg1": "currentCounter",
+        "arg2": "countDelta"
+    },
+    "EVENT_RAID_SCORE_NOTIFICATION_ADDED": {
+        "arg1": "notificationId"
+    },
+    "EVENT_RAID_SCORE_NOTIFICATION_REMOVED": {
+        "arg1": "notificationId"
+    },
+    "EVENT_RAID_TRIAL_COMPLETE": {
+        "arg1": "trialName",
+        "arg2": "score",
+        "arg3": "totalTime"
+    },
+    "EVENT_RAID_TRIAL_FAILED": {
+        "arg1": "trialName",
+        "arg2": "score"
+    },
+    "EVENT_RAID_TRIAL_NEW_BEST_SCORE": {
+        "arg1": "trialName",
+        "arg2": "score",
+        "arg3": "isWeekly"
+    },
+    "EVENT_RAID_TRIAL_RESET_BEST_SCORE": {
+        "arg1": "trialName",
+        "arg2": "isWeekly"
+    },
+    "EVENT_RAID_TRIAL_SCORE_UPDATE": {
+        "arg1": "scoreUpdateReason",
+        "arg2": "scoreAmount",
+        "arg3": "totalScore"
+    },
+    "EVENT_RAID_TRIAL_STARTED": {
+        "arg1": "trialName",
+        "arg2": "weekly"
+    },
+    "EVENT_RAM_ESCORT_COUNT_UPDATE": {
+        "arg1": "numEscorts"
+    },
+    "EVENT_RANK_POINT_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "rankPoints",
+        "arg3": "difference"
+    },
+    "EVENT_RECALL_KEEP_USE_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_RECIPE_LEARNED": {
+        "arg1": "recipeListIndex",
+        "arg2": "recipeIndex"
+    },
+    "EVENT_RECONSTRUCT_RESPONSE": {
+        "arg1": "responseCode"
+    },
+    "EVENT_REMOTE_SCENE_REQUEST": {
+        "arg1": "messageOrigin",
+        "arg2": "requestType",
+        "arg3": "sceneName"
+    },
+    "EVENT_REMOTE_TOP_LEVEL_CHANGE": {
+        "arg1": "messageOrigin",
+        "arg2": "requestType"
+    },
+    "EVENT_REMOVE_ACTIVE_COMBAT_TIP": {
+        "arg1": "activeCombatTipId",
+        "arg2": "result"
+    },
+    "EVENT_REMOVE_TUTORIAL": {
+        "arg1": "tutorialIndex"
+    },
+    "EVENT_REQUEST_ALERT": {
+        "arg1": "alertCategory",
+        "arg2": "soundId",
+        "arg3": "message"
+    },
+    "EVENT_REQUEST_CONFIRM_USE_ITEM": {
+        "arg1": "bagId",
+        "arg2": "slotIndex"
+    },
+    "EVENT_REQUEST_SHOW_GAMEPAD_CHAPTER_UPGRADE": {
+        "arg1": "chapterUpgradeId"
+    },
+    "EVENT_REQUIREMENTS_FAIL": {
+        "arg1": "errorId"
+    },
+    "EVENT_RESURRECT_REQUEST": {
+        "arg1": "requesterCharacterName",
+        "arg2": "timeLeftToAccept",
+        "arg3": "requesterDisplayName"
+    },
+    "EVENT_RESURRECT_RESULT": {
+        "arg1": "targetCharacterName",
+        "arg2": "result",
+        "arg3": "targetDisplayName"
+    },
+    "EVENT_RETICLE_HIDDEN_UPDATE": {
+        "arg1": "hidden"
+    },
+    "EVENT_RETRAIT_RESPONSE": {
+        "arg1": "responseCode"
+    },
+    "EVENT_REVEAL_ANTIQUITY_DIG_SITES_ON_MAP": {
+        "arg1": "antiquityId"
+    },
+    "EVENT_REVENGE_KILL": {
+        "arg1": "killedCharacterName",
+        "arg2": "killedDisplayName"
+    },
+    "EVENT_RIDING_SKILL_IMPROVEMENT": {
+        "arg1": "ridingSkillType",
+        "arg2": "previous",
+        "arg3": "current",
+        "arg4": "source"
+    },
+    "EVENT_SAVE_GUILD_RANKS_RESPONSE": {
+        "arg1": "guildId",
+        "arg2": "result"
+    },
+    "EVENT_SCREENSHOT_SAVED": {
+        "arg1": "directory",
+        "arg2": "filename"
+    },
+    "EVENT_SCREEN_RESIZED": {
+        "arg1": "width",
+        "arg2": "height"
+    },
+    "EVENT_SCRIPTED_WORLD_EVENT_INVITE": {
+        "arg1": "eventId",
+        "arg2": "scriptedEventName",
+        "arg3": "inviterName",
+        "arg4": "questName"
+    },
+    "EVENT_SCRIPTED_WORLD_EVENT_INVITE_REMOVED": {
+        "arg1": "eventId"
+    },
+    "EVENT_SCRIPT_ACCESS_VIOLATION": {
+        "arg1": "protectedFunctionName"
+    },
+    "EVENT_SCRYING_ACTIVE_SKILL_USE_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_SCRYING_EXIT_RESPONSE": {
+        "arg1": "accept"
+    },
+    "EVENT_SECURE_3D_RENDER_MODE_CHANGED": {
+        "arg1": "enabled"
+    },
+    "EVENT_SECURE_RENDER_MODE_CHANGED": {
+        "arg1": "enabled"
+    },
+    "EVENT_SELL_RECEIPT": {
+        "arg1": "itemName",
+        "arg2": "itemQuantity",
+        "arg3": "money"
+    },
+    "EVENT_SET_SUBTITLE": {
+        "arg1": "subtitleText"
+    },
+    "EVENT_SHOW_BOOK": {
+        "arg1": "bookTitle",
+        "arg2": "body",
+        "arg3": "medium",
+        "arg4": "showTitle",
+        "arg5": "bookId"
+    },
+    "EVENT_SHOW_PREGAME_GUI_IN_STATE": {
+        "arg1": "desiredStateName"
+    },
+    "EVENT_SHOW_SPECIFIC_HELP_PAGE": {
+        "arg1": "helpCategoryIndex",
+        "arg2": "helpIndex"
+    },
+    "EVENT_SHOW_SUBTITLE": {
+        "arg1": "channelType",
+        "arg2": "speakerName",
+        "arg3": "text"
+    },
+    "EVENT_SHOW_TREASURE_MAP": {
+        "arg1": "treasureMapIndex"
+    },
+    "EVENT_SHOW_ZONE_STORIES_SCENE": {
+        "arg1": "zoneId"
+    },
+    "EVENT_SIEGE_BUSY": {
+        "arg1": "siegeName"
+    },
+    "EVENT_SIEGE_CONTROL_ANOTHER_PLAYER": {
+        "arg1": "siegeName"
+    },
+    "EVENT_SKILL_LINE_ADDED": {
+        "arg1": "skillType",
+        "arg2": "skillLineIndex",
+        "arg3": "advised"
+    },
+    "EVENT_SKILL_POINTS_CHANGED": {
+        "arg1": "pointsBefore",
+        "arg2": "pointsNow",
+        "arg3": "partialPointsBefore",
+        "arg4": "partialPointsNow",
+        "arg5": "skillPointChangeReason"
+    },
+    "EVENT_SKILL_RANK_UPDATE": {
+        "arg1": "skillType",
+        "arg2": "skillLineIndex",
+        "arg3": "rank"
+    },
+    "EVENT_SKILL_RESPEC_RESULT": {
+        "arg1": "result"
+    },
+    "EVENT_SKILL_XP_UPDATE": {
+        "arg1": "skillType",
+        "arg2": "skillLineIndex",
+        "arg3": "reason",
+        "arg4": "rank",
+        "arg5": "previousXP",
+        "arg6": "currentXP"
+    },
+    "EVENT_SLOT_IS_LOCKED_FAILURE": {
+        "arg1": "bagId",
+        "arg2": "slotId"
+    },
+    "EVENT_SMITHING_TRAIT_RESEARCH_CANCELED": {
+        "arg1": "craftingSkillType",
+        "arg2": "researchLineIndex",
+        "arg3": "traitIndex"
+    },
+    "EVENT_SMITHING_TRAIT_RESEARCH_COMPLETED": {
+        "arg1": "craftingSkillType",
+        "arg2": "researchLineIndex",
+        "arg3": "traitIndex"
+    },
+    "EVENT_SMITHING_TRAIT_RESEARCH_STARTED": {
+        "arg1": "craftingSkillType",
+        "arg2": "researchLineIndex",
+        "arg3": "traitIndex"
+    },
+    "EVENT_SOCIAL_ERROR": {
+        "arg1": "error"
+    },
+    "EVENT_SOUL_GEM_ITEM_CHARGE_FAILURE": {
+        "arg1": "reason"
+    },
+    "EVENT_SPAM_WARNING": {
+        "arg1": "spamType"
+    },
+    "EVENT_STACKED_ALL_ITEMS_IN_BAG": {
+        "arg1": "bagId"
+    },
+    "EVENT_START_FAST_TRAVEL_INTERACTION": {
+        "arg1": "nodeIndex"
+    },
+    "EVENT_START_FAST_TRAVEL_KEEP_INTERACTION": {
+        "arg1": "keepId"
+    },
+    "EVENT_START_SKILL_RESPEC": {
+        "arg1": "allocationMode",
+        "arg2": "paymentType"
+    },
+    "EVENT_START_SOUL_GEM_RESURRECTION": {
+        "arg1": "durationMs"
+    },
+    "EVENT_STATS_UPDATED": {
+        "arg1": "unitTag"
+    },
+    "EVENT_STEALTH_STATE_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "stealthState"
+    },
+    "EVENT_STORE_FAILURE": {
+        "arg1": "reason",
+        "arg2": "errorStringId"
+    },
+    "EVENT_STYLE_LEARNED": {
+        "arg1": "itemStyleId",
+        "arg2": "chapterIndex",
+        "arg3": "isDefaultRacialStyle"
+    },
+    "EVENT_TARGET_CHANGED": {
+        "arg1": "unitTag"
+    },
+    "EVENT_TELVAR_STONE_UPDATE": {
+        "arg1": "newTelvarStones",
+        "arg2": "oldTelvarStones",
+        "arg3": "reason",
+        "arg4": "reasonSupplementaryInfo"
+    },
+    "EVENT_TIMED_ACTIVITY_PROGRESS_UPDATED": {
+        "arg1": "index",
+        "arg2": "previousProgress",
+        "arg3": "currentProgress",
+        "arg4": "complete"
+    },
+    "EVENT_TIMED_ACTIVITY_TYPE_PROGRESS_UPDATED": {
+        "arg1": "timedActivityType",
+        "arg2": "previousNumCompleted",
+        "arg3": "currentNumCompleted",
+        "arg4": "complete"
+    },
+    "EVENT_TITLE_UPDATE": {
+        "arg1": "unitTag"
+    },
+    "EVENT_TRACKED_ZONE_STORY_ACTIVITY_COMPLETED": {
+        "arg1": "zoneId",
+        "arg2": "zoneCompletionType",
+        "arg3": "activityId"
+    },
+    "EVENT_TRADE_CANCELED": {
+        "arg1": "cancelerName"
+    },
+    "EVENT_TRADE_CONFIRMATION_CHANGED": {
+        "arg1": "who",
+        "arg2": "level"
+    },
+    "EVENT_TRADE_ELEVATION_FAILED": {
+        "arg1": "reason",
+        "arg2": "itemName"
+    },
+    "EVENT_TRADE_FAILED": {
+        "arg1": "reason"
+    },
+    "EVENT_TRADE_INVITE_CONSIDERING": {
+        "arg1": "inviterCharacterName",
+        "arg2": "inviterDisplayName"
+    },
+    "EVENT_TRADE_INVITE_FAILED": {
+        "arg1": "reason",
+        "arg2": "inviteeCharacterName",
+        "arg3": "inviteeDisplayName"
+    },
+    "EVENT_TRADE_INVITE_WAITING": {
+        "arg1": "inviteeCharacterName",
+        "arg2": "inviteeDisplayName"
+    },
+    "EVENT_TRADE_ITEM_ADDED": {
+        "arg1": "who",
+        "arg2": "tradeIndex",
+        "arg3": "itemSoundCategory"
+    },
+    "EVENT_TRADE_ITEM_ADD_FAILED": {
+        "arg1": "reason",
+        "arg2": "itemName"
+    },
+    "EVENT_TRADE_ITEM_REMOVED": {
+        "arg1": "who",
+        "arg2": "tradeIndex",
+        "arg3": "itemSoundCategory"
+    },
+    "EVENT_TRADE_ITEM_UPDATED": {
+        "arg1": "who",
+        "arg2": "tradeIndex"
+    },
+    "EVENT_TRADE_MONEY_CHANGED": {
+        "arg1": "who",
+        "arg2": "money"
+    },
+    "EVENT_TRADING_HOUSE_AWAITING_RESPONSE": {
+        "arg1": "responseType"
+    },
+    "EVENT_TRADING_HOUSE_CONFIRM_ITEM_PURCHASE": {
+        "arg1": "pendingPurchaseIndex"
+    },
+    "EVENT_TRADING_HOUSE_ERROR": {
+        "arg1": "errorCode"
+    },
+    "EVENT_TRADING_HOUSE_OPERATION_TIME_OUT": {
+        "arg1": "responseType"
+    },
+    "EVENT_TRADING_HOUSE_PENDING_ITEM_UPDATE": {
+        "arg1": "slotId",
+        "arg2": "isPending"
+    },
+    "EVENT_TRADING_HOUSE_RESPONSE_RECEIVED": {
+        "arg1": "responseType",
+        "arg2": "result"
+    },
+    "EVENT_TRADING_HOUSE_RESPONSE_TIMEOUT": {
+        "arg1": "responseType"
+    },
+    "EVENT_TRADING_HOUSE_SEARCH_COOLDOWN_UPDATE": {
+        "arg1": "cooldownMilliseconds"
+    },
+    "EVENT_TRADING_HOUSE_SELECTED_GUILD_CHANGED": {
+        "arg1": "guildId"
+    },
+    "EVENT_TRAIT_LEARNED": {
+        "arg1": "itemName",
+        "arg2": "itemTrait"
+    },
+    "EVENT_TRIAL_FEATURE_RESTRICTED": {
+        "arg1": "restrictionType"
+    },
+    "EVENT_TUTORIAL_HIDDEN": {
+        "arg1": "tutorialIndex"
+    },
+    "EVENT_TUTORIAL_SYSTEM_ENABLED_STATE_CHANGED": {
+        "arg1": "enabled"
+    },
+    "EVENT_TUTORIAL_TRIGGER_COMPLETED": {
+        "arg1": "tutorialTrigger"
+    },
+    "EVENT_UI_ERROR": {
+        "arg1": "stringId"
+    },
+    "EVENT_UNIT_ATTRIBUTE_VISUAL_ADDED": {
+        "arg1": "unitTag",
+        "arg2": "unitAttributeVisual",
+        "arg3": "statType",
+        "arg4": "attributeType",
+        "arg5": "powerType",
+        "arg6": "value",
+        "arg7": "maxValue",
+        "arg8": "sequenceId"
+    },
+    "EVENT_UNIT_ATTRIBUTE_VISUAL_REMOVED": {
+        "arg1": "unitTag",
+        "arg2": "unitAttributeVisual",
+        "arg3": "statType",
+        "arg4": "attributeType",
+        "arg5": "powerType",
+        "arg6": "value",
+        "arg7": "maxValue",
+        "arg8": "sequenceId"
+    },
+    "EVENT_UNIT_ATTRIBUTE_VISUAL_UPDATED": {
+        "arg1": "unitTag",
+        "arg10": "sequenceId",
+        "arg2": "unitAttributeVisual",
+        "arg3": "statType",
+        "arg4": "attributeType",
+        "arg5": "powerType",
+        "arg6": "oldValue",
+        "arg7": "newValue",
+        "arg8": "oldMaxValue",
+        "arg9": "newMaxValue"
+    },
+    "EVENT_UNIT_CHARACTER_NAME_CHANGED": {
+        "arg1": "unitTag"
+    },
+    "EVENT_UNIT_CREATED": {
+        "arg1": "unitTag"
+    },
+    "EVENT_UNIT_DEATH_STATE_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "isDead"
+    },
+    "EVENT_UNIT_DESTROYED": {
+        "arg1": "unitTag"
+    },
+    "EVENT_UPDATE_GUI_LOADING_PROGRESS": {
+        "arg1": "guiName",
+        "arg2": "assetsLoaded",
+        "arg3": "assetsTotal"
+    },
+    "EVENT_VETERAN_DIFFICULTY_CHANGED": {
+        "arg1": "unitTag",
+        "arg2": "isDifficult"
+    },
+    "EVENT_VIBRATION": {
+        "arg1": "duration",
+        "arg2": "coarseMotor",
+        "arg3": "fineMotor",
+        "arg4": "leftTriggerMotor",
+        "arg5": "rightTriggerMotor",
+        "arg6": "debugSourceInfo"
+    },
+    "EVENT_VIDEO_PLAYBACK_ERROR": {
+        "arg1": "errorReason"
+    },
+    "EVENT_WEAPON_PAIR_LOCK_CHANGED": {
+        "arg1": "locked"
+    },
+    "EVENT_WEAPON_SWAP_LOCKED": {
+        "arg1": "swapLevel"
+    },
+    "EVENT_WEREWOLF_STATE_CHANGED": {
+        "arg1": "werewolf"
+    },
+    "EVENT_WORLD_EVENT_ACTIVATED": {
+        "arg1": "worldEventInstanceId"
+    },
+    "EVENT_WORLD_EVENT_ACTIVE_LOCATION_CHANGED": {
+        "arg1": "worldEventInstanceId",
+        "arg2": "oldWorldEventLocationId",
+        "arg3": "newWorldEventLocationId"
+    },
+    "EVENT_WORLD_EVENT_DEACTIVATED": {
+        "arg1": "worldEventInstanceId"
+    },
+    "EVENT_WORLD_EVENT_UNIT_CHANGED_PIN_TYPE": {
+        "arg1": "worldEventInstanceId",
+        "arg2": "unitTag",
+        "arg3": "oldPinType",
+        "arg4": "newPinType"
+    },
+    "EVENT_WORLD_EVENT_UNIT_CREATED": {
+        "arg1": "worldEventInstanceId",
+        "arg2": "unitTag"
+    },
+    "EVENT_WORLD_EVENT_UNIT_DESTROYED": {
+        "arg1": "worldEventInstanceId",
+        "arg2": "unitTag"
+    },
+    "EVENT_WRIT_VOUCHER_UPDATE": {
+        "arg1": "newWritVouchers",
+        "arg2": "oldWritVouchers",
+        "arg3": "reason",
+        "arg4": "reasonSupplementaryInfo"
+    },
+    "EVENT_ZONE_CHANGED": {
+        "arg1": "zoneName",
+        "arg2": "subZoneName",
+        "arg3": "newSubzone",
+        "arg4": "zoneId",
+        "arg5": "subZoneId"
+    },
+    "EVENT_ZONE_COLLECTIBLE_REQUIREMENT_FAILED": {
+        "arg1": "requiredCollectible",
+        "arg2": "message"
+    },
+    "EVENT_ZONE_STORY_QUEST_ACTIVITY_TRACKED": {
+        "arg1": "questIndex"
+    },
+    "EVENT_ZONE_UPDATE": {
+        "arg1": "unitTag",
+        "arg2": "newZoneName"
+    }
+}
