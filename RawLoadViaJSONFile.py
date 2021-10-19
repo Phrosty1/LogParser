@@ -18,13 +18,14 @@ csvdtype.update({arg:'str' for arg in csvNumArgs})
 csvcols = ";".join(csvdtype.keys())
 rawFmtCSV = re.compile("\[(\d+)\]\s?=\s?\"(.*?)\",\s*")
 def loadRaw(sourcefilename):
-    with open(sourcefilename, "r", encoding='utf8') as sourcefile:
-        pseudocsv = sourcefile.read()
-        pseudocsv = pseudocsv[pseudocsv.find("[1]"):pseudocsv.rfind("\",")+2]
-        pseudocsv = pseudocsv.replace("\\\"",":quot:")
-        pseudocsv = rawFmtCSV.sub("\\1;\\2\\n", pseudocsv)
-        pseudocsv = pseudocsv.replace(":quot:","\\\"")
-        return pd.read_csv(StringIO(csvcols+"\n"+pseudocsv), dtype=csvdtype, sep=";", header=0)
+   with open(sourcefilename, "r", encoding='utf8') as sourcefile:
+      pseudocsv = sourcefile.read()
+      # pseudocsv = pseudocsv[pseudocsv.find("[1]"):pseudocsv.rfind("\",")+2]
+      # pseudocsv = pseudocsv.replace("\\\"",":quot:")
+      # pseudocsv = rawFmtCSV.sub("\\1;\\2\\n", pseudocsv)
+      # pseudocsv = pseudocsv.replace(":quot:","\\\"")
+      pseudocsv = "\n".join([seqAndData[0]+";"+seqAndData[1] for seqAndData in rawFmtCSV.findall(pseudocsv.replace("\\\"",":quot:"))]).replace(":quot:","\\\"")
+      return pd.read_csv(StringIO(csvcols+"\n"+pseudocsv), dtype=csvdtype, sep=";", header=0)
 def getAllEventArgs(jsonFinalEventArgsInfo):
    retval = {}
    if not os.path.exists(eventDataFolder+'/'+'ALL'): os.makedirs(eventDataFolder+'/'+'ALL')
