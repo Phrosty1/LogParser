@@ -20,11 +20,7 @@ rawFmtCSV = re.compile("\[(\d+)\]\s?=\s?\"(.*?)\",\s*")
 def loadRaw(sourcefilename):
    with open(sourcefilename, "r", encoding='utf8') as sourcefile:
       pseudocsv = sourcefile.read()
-      # pseudocsv = pseudocsv[pseudocsv.find("[1]"):pseudocsv.rfind("\",")+2]
-      # pseudocsv = pseudocsv.replace("\\\"",":quot:")
-      # pseudocsv = rawFmtCSV.sub("\\1;\\2\\n", pseudocsv)
-      # pseudocsv = pseudocsv.replace(":quot:","\\\"")
-      pseudocsv = "\n".join([seqAndData[0]+";"+seqAndData[1] for seqAndData in rawFmtCSV.findall(pseudocsv.replace("\\\"",":quot:"))]).replace(":quot:","\\\"")
+      pseudocsv = ("\n".join([seqAndData[0]+";"+seqAndData[1] for seqAndData in rawFmtCSV.findall(pseudocsv.replace("\\\"",":quot:"))])).replace(":quot:","\\\"")
       return pd.read_csv(StringIO(csvcols+"\n"+pseudocsv), dtype=csvdtype, sep=";", header=0)
 def getAllEventArgs(jsonFinalEventArgsInfo):
    retval = {}
@@ -50,29 +46,43 @@ def mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate): # pd.read_par
       except FileNotFoundError: datByEventFile[fileNameEventDate] = eventDataFrame; cntByEventFile[fileNameEventDate] = 0 # set to 0 since nothing was in the file
 
 lstNotInJSON = set()
+
+# Preload ALL files as new (only needed if reloading everything)
+for allFile in [f for f in os.listdir(eventDataFolder+'/'+'ALL') if f.endswith('.parquet')]:
+   begintime = int(round(time.time() * 1000))
+   eventDataFrame = pd.read_parquet(eventDataFolder+'/'+'ALL'+'/'+allFile)
+   fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
+   fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
+   mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
+   cntByEventFile[fileNameEventDate] = 0
+   print("PreLoaded:"+allFile, (int(round(time.time() * 1000))-begintime))
+
 rawfiles = [f for f in os.listdir(rawLogFolder) if f.endswith('.lua') or f.endswith('.lson')]
 # rawfiles = rawfiles[:1]
 # rawfiles = [f for f in rawfiles if f=="2021-10-16_20-19-06_SAMANTHA-GAMING.lua"]
 for rawfile in rawfiles:
    begintime = int(round(time.time() * 1000))
-   df = loadRaw(rawLogFolder+'/'+rawfile)
-   fileprefix = time.strftime('%Y-%m-%d', time.localtime(df['timestamp'].values[-1]/1000))
+   eventDataFrame = loadRaw(rawLogFolder+'/'+rawfile)
+   fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
    fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
-   mergeDataFrameIntoFilePrep(df, fileNameEventDate)
+   mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
+   print("Loaded from raw:"+rawfile, (int(round(time.time() * 1000))-begintime))
+
+lstALLFiles = dict(datByEventFile)
+for (fileNameEventDate, eventDataFrame) in lstALLFiles.items():
+   begintime = int(round(time.time() * 1000))
+   fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
    datByEventFile[fileNameEventDate].drop_duplicates(subset=["player", "timestamp", "seq"], inplace=True)
    indDataIsNew = (len(datByEventFile[fileNameEventDate]) != cntByEventFile[fileNameEventDate])
-   print(rawfile+" is new "+str(indDataIsNew))
+   print(fileNameEventDate+" is new "+str(indDataIsNew))
    if indDataIsNew : # You'll want an indicator for handling if reprocessing for a changed JSON
-      for eventName, grpdf in df.groupby('event'):
+      for eventName, grpdf in eventDataFrame.groupby('event'):
          if eventName in allEventArgs:
             e = allEventArgs[eventName]
             eventDataFrame = pd.DataFrame(grpdf, columns=e['eventDfCols']).rename(columns=e['eventArgRename']).astype(dtype=e['eventArgTypes'])
             mergeDataFrameIntoFilePrep(eventDataFrame, e['destEventPath']+'/'+fileprefix+'.parquet')
          else: lstNotInJSON.add(eventName)
-   df = None
-   grpdf = None
-   print("Loaded and parsed:"+rawfile, (int(round(time.time() * 1000))-begintime))
-
+   print("Parsed to event folders:"+fileNameEventDate, (int(round(time.time() * 1000))-begintime))
 
 begintime = int(round(time.time() * 1000))
 lstDirsToMake = set(os.path.dirname(key) for (key,value) in cntByEventFile.items() if value == 0 and not os.path.exists(os.path.dirname(key)))
