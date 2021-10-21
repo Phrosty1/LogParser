@@ -11,6 +11,7 @@ eventDataFolder = os.path.realpath('../Sandbox_Brian/EventData')
 def switchType(intype):
     if intype == 'boolean': return 'category'
     elif intype == 'string': return 'str'
+   #  elif intype == 'category': return 'str' # testing something
     else: return intype
 csvdtype = {'seq': int, 'timestamp': 'int64', 'player': 'category', 'event': 'category'}
 csvNumArgs = ["arg"+str(i) for i in range(1, 25)]
@@ -26,14 +27,15 @@ def getAllEventArgs(jsonFinalEventArgsInfo):
    retval = {}
    if not os.path.exists(eventDataFolder+'/'+'ALL'): os.makedirs(eventDataFolder+'/'+'ALL')
    for eventName, eventArgDetails in jsonFinalEventArgsInfo.items():
-      if eventName == eventName: # "EVENT_ABILITY_PROGRESSION_XP_UPDATE"
+      # if eventName == 'EVENT_COMBAT_EVENT' : # 'EVENT_ABILITY_PROGRESSION_RESULT': # "EVENT_ABILITY_PROGRESSION_XP_UPDATE"
          destEventPath = eventDataFolder+'/'+eventName
          # if not os.path.exists(destEventPath): os.makedirs(destEventPath)
          eventDfCols = ['seq', 'timestamp', 'player']
          eventDfCols.extend(eventArgDetails.keys())
          eventArgRename = {argNum:argDetail['name'] for argNum, argDetail in eventArgDetails.items()}
+         eventArgConstmap = {argDetail['name']:argDetail['constmap'] for argDetail in eventArgDetails.values() if 'constmap' in argDetail}
          eventArgTypes = {argDetail['name']:switchType(argDetail['pandastype']) for argDetail in eventArgDetails.values()}
-         retval[eventName] = {'eventName':eventName, 'destEventPath':destEventPath, 'eventDfCols':eventDfCols, 'eventArgRename':eventArgRename, 'eventArgTypes':eventArgTypes}
+         retval[eventName] = { 'eventName':eventName, 'destEventPath':destEventPath, 'eventDfCols':eventDfCols, 'eventArgConstmap':eventArgConstmap, 'eventArgRename':eventArgRename, 'eventArgTypes':eventArgTypes}
    return retval
 allEventArgs = getAllEventArgs(json.load(open(eventSpecsFolder+'/'+'FinalEventArgsInfo.json')))
 cntByEventFile = {}
@@ -49,24 +51,24 @@ lstNotInJSON = set()
 
 # Preload ALL files as new (only needed if reloading everything)
 for allFile in [f for f in os.listdir(eventDataFolder+'/'+'ALL') if f.endswith('.parquet')]:
-   begintime = int(round(time.time() * 1000))
-   eventDataFrame = pd.read_parquet(eventDataFolder+'/'+'ALL'+'/'+allFile)
-   fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
-   fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
-   mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
-   cntByEventFile[fileNameEventDate] = 0
-   print("PreLoaded:"+allFile, (int(round(time.time() * 1000))-begintime))
+   # if not allFile.startswith('2021-10-16') :
+      begintime = int(round(time.time() * 1000))
+      eventDataFrame = pd.read_parquet(eventDataFolder+'/'+'ALL'+'/'+allFile)
+      fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
+      fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
+      mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
+      cntByEventFile[fileNameEventDate] = 0
+      print("PreLoaded:"+allFile, (int(round(time.time() * 1000))-begintime))
 
 rawfiles = [f for f in os.listdir(rawLogFolder) if f.endswith('.lua') or f.endswith('.lson')]
-# rawfiles = rawfiles[:1]
-# rawfiles = [f for f in rawfiles if f=="2021-10-16_20-19-06_SAMANTHA-GAMING.lua"]
 for rawfile in rawfiles:
-   begintime = int(round(time.time() * 1000))
-   eventDataFrame = loadRaw(rawLogFolder+'/'+rawfile)
-   fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
-   fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
-   mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
-   print("Loaded from raw:"+rawfile, (int(round(time.time() * 1000))-begintime))
+   # if rawfile.startswith('2021-10-16_20-19-06_SAMANTHA-GAMING.lua') :
+      begintime = int(round(time.time() * 1000))
+      eventDataFrame = loadRaw(rawLogFolder+'/'+rawfile)
+      fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
+      fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
+      mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
+      print("Loaded from raw:"+rawfile, (int(round(time.time() * 1000))-begintime))
 
 lstALLFiles = dict(datByEventFile)
 for (fileNameEventDate, eventDataFrame) in lstALLFiles.items():
@@ -79,7 +81,7 @@ for (fileNameEventDate, eventDataFrame) in lstALLFiles.items():
       for eventName, grpdf in eventDataFrame.groupby('event'):
          if eventName in allEventArgs:
             e = allEventArgs[eventName]
-            eventDataFrame = pd.DataFrame(grpdf, columns=e['eventDfCols']).rename(columns=e['eventArgRename']).astype(dtype=e['eventArgTypes'])
+            eventDataFrame = pd.DataFrame(grpdf, columns=e['eventDfCols']).rename(columns=e['eventArgRename']).replace(to_replace=e['eventArgConstmap']).astype(dtype=e['eventArgTypes'])
             mergeDataFrameIntoFilePrep(eventDataFrame, e['destEventPath']+'/'+fileprefix+'.parquet')
          else: lstNotInJSON.add(eventName)
    print("Parsed to event folders:"+fileNameEventDate, (int(round(time.time() * 1000))-begintime))
@@ -93,4 +95,5 @@ for (fileNameEventDate, eventDataFrame) in datByEventFile.items():
    if len(eventDataFrame) != cntByEventFile[fileNameEventDate] :
       eventDataFrame.to_parquet(fileNameEventDate)
 print("Done writing files. ", (int(round(time.time() * 1000))-begintime))
+
 
