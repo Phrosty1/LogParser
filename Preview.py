@@ -9,7 +9,8 @@ import time # time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1634309423832/10
 # https://pandas.pydata.org/docs/reference/api/pandas.merge_asof.html
 folderEventSpecs = os.path.realpath('../ESOUIDocumentation/')
 folderRawLogs = os.path.realpath('../AnyLoggerRawLuaDumps/')
-folderEventData = os.path.realpath('../Sandbox_Brian/EventData') # ; folderEventData = os.path.realpath('C:\FolderToPutLogFiles\EsoAnalytics\Sandbox_Brian\EventData')
+folderEventData = os.path.realpath('../Sandbox_Brian/EventData/') # ; folderEventData = os.path.realpath('C:\FolderToPutLogFiles\EsoAnalytics\Sandbox_Brian\EventData')
+folderSandBox = os.path.realpath('../Sandbox_Brian/')
 def getEventDataframe(event='EVENT_COMBAT_EVENT', days=0):
    if os.path.exists(folderEventData+'/'+event) :
       return pd.concat(pd.read_parquet(folderEventData+'/'+event+'/'+f) for f in ([f for f in os.listdir(folderEventData+'/'+event) if f.endswith('.parquet')][-days:]))
@@ -17,8 +18,8 @@ def resortIndex(eventsDataframe):
    eventsDataframe.sort_values( ['timestamp', 'player', 'seq'], ignore_index=True, inplace=True)
    return eventsDataframe
 
-EVENT_PLAYER_ACTIVELY_ENGAGED_STATE = getEventDataframe('EVENT_PLAYER_ACTIVELY_ENGAGED_STATE', 1)
-# display(EVENT_PLAYER_ACTIVELY_ENGAGED_STATE)
+EVENT_COMBAT_EVENT = getEventDataframe('EVENT_COMBAT_EVENT', 1)
+# display(EVENT_COMBAT_EVENT)
 EVENT_PLAYER_COMBAT_STATE = resortIndex(getEventDataframe('EVENT_PLAYER_COMBAT_STATE'))
 # display(EVENT_PLAYER_COMBAT_STATE)
 
@@ -29,9 +30,18 @@ CALC_TIMES_IN_COMBAT = pd.DataFrame(pd.merge_asof(EVENT_PLAYER_COMBAT_STATE[EVEN
          allow_exact_matches=False)
    , columns=['player','timestamp_left','timestamp_right']).rename(columns={'player':'player', 'timestamp_left':'combat_begin', 'timestamp_right':'combat_end'})
 CALC_TIMES_IN_COMBAT['duration'] = CALC_TIMES_IN_COMBAT['combat_end']-CALC_TIMES_IN_COMBAT['combat_begin']
-display(CALC_TIMES_IN_COMBAT)
+# display(CALC_TIMES_IN_COMBAT.sort_values( ['duration']))
 
-display(CALC_TIMES_IN_COMBAT.sort_values( ['duration']))
+# ALL = resortIndex(getEventDataframe('ALL'))
+# display(ALL[ALL['timestamp'].between(1634415375075, 1634415920805)])
+# display(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].between(1634415375075, 1634415920805)])
+
+bigbattle = pd.DataFrame(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].between(1634418026126, 1634418028020)])
+bigbattle.sort_values( ['abilityId', 'abilityName', 'timestamp', 'seq'], ignore_index=True, inplace=True)
+display(bigbattle)
+bigbattle.to_html(folderSandBox+'/'+'output.html')
+display(bigbattle.groupby('abilityName').count())
+# display(bigbattle[bigbattle['abilityName']=='Acid Spray'])
 
 # display(getEventDataframe(event='EVENT_COMBAT_EVENT').groupby('player').boxplot())
 # df = EVENT_PLAYER_COMBAT_STATE[EVENT_PLAYER_COMBAT_STATE['inCombat']=='true']
@@ -49,5 +59,6 @@ display(CALC_TIMES_IN_COMBAT.sort_values( ['duration']))
 #          suffixes=['_left','_right'], 
 #          allow_exact_matches=False))
 
+bigbattle = getEventDataframe('ALL')
 
 
