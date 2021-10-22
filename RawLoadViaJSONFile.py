@@ -2,11 +2,11 @@ import re, pandas as pd, numpy as np, os, json
 from io import StringIO
 from IPython.core.display import display
 import time # time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1634309423832/1000))
-eventSpecsFolder = os.path.realpath('../ESOUIDocumentation/')
-rawLogFolder = os.path.realpath('../AnyLoggerRawLuaDumps/')
-# eventDataFolder = 'C:/Beachhead/Misc/LogTinker/outdata/'
-eventDataFolder = os.path.realpath('../Sandbox_Brian/EventData')
-# eventDataFolder = os.path.realpath('C:\FolderToPutLogFiles\EsoAnalytics\Sandbox_Brian\EventData')
+folderEventSpecs = os.path.realpath('../ESOUIDocumentation/')
+folderRawLogs = os.path.realpath('../AnyLoggerRawLuaDumps/')
+# folderEventData = 'C:/Beachhead/Misc/LogTinker/outdata/'
+folderEventData = os.path.realpath('../Sandbox_Brian/EventData/')
+# folderEventData = os.path.realpath('C:\FolderToPutLogFiles\EsoAnalytics\Sandbox_Brian\EventData')
 
 def switchType(intype):
     if intype == 'boolean': return 'category'
@@ -25,10 +25,10 @@ def loadRaw(sourcefilename):
       return pd.read_csv(StringIO(csvcols+"\n"+pseudocsv), dtype=csvdtype, sep=";", header=0)
 def getAllEventArgs(jsonFinalEventArgsInfo):
    retval = {}
-   if not os.path.exists(eventDataFolder+'/'+'ALL'): os.makedirs(eventDataFolder+'/'+'ALL')
+   if not os.path.exists(folderEventData+'/'+'ALL'): os.makedirs(folderEventData+'/'+'ALL')
    for eventName, eventArgDetails in jsonFinalEventArgsInfo.items():
       # if eventName == 'EVENT_COMBAT_EVENT' : # 'EVENT_ABILITY_PROGRESSION_RESULT': # "EVENT_ABILITY_PROGRESSION_XP_UPDATE"
-         destEventPath = eventDataFolder+'/'+eventName
+         destEventPath = folderEventData+'/'+eventName
          # if not os.path.exists(destEventPath): os.makedirs(destEventPath)
          eventDfCols = ['seq', 'timestamp', 'player']
          eventDfCols.extend(eventArgDetails.keys())
@@ -37,7 +37,7 @@ def getAllEventArgs(jsonFinalEventArgsInfo):
          eventArgTypes = {argDetail['name']:switchType(argDetail['pandastype']) for argDetail in eventArgDetails.values()}
          retval[eventName] = { 'eventName':eventName, 'destEventPath':destEventPath, 'eventDfCols':eventDfCols, 'eventArgConstmap':eventArgConstmap, 'eventArgRename':eventArgRename, 'eventArgTypes':eventArgTypes}
    return retval
-allEventArgs = getAllEventArgs(json.load(open(eventSpecsFolder+'/'+'FinalEventArgsInfo.json')))
+allEventArgs = getAllEventArgs(json.load(open(folderEventSpecs+'/'+'FinalEventArgsInfo.json')))
 cntByEventFile = {}
 datByEventFile = {}
 def mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate): # pd.read_parquet(fileNameEventDate).append(eventDataFrame).drop_duplicates(subset=["seq", "timestamp", "player"]).to_parquet(fileNameEventDate)
@@ -50,23 +50,23 @@ def mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate): # pd.read_par
 lstNotInJSON = set()
 
 # Preload ALL files as new (only needed if reloading everything)
-for allFile in [f for f in os.listdir(eventDataFolder+'/'+'ALL') if f.endswith('.parquet')]:
+for allFile in [f for f in os.listdir(folderEventData+'/'+'ALL') if f.endswith('.parquet')]:
    # if not allFile.startswith('2021-10-16') :
       begintime = int(round(time.time() * 1000))
-      eventDataFrame = pd.read_parquet(eventDataFolder+'/'+'ALL'+'/'+allFile)
+      eventDataFrame = pd.read_parquet(folderEventData+'/'+'ALL'+'/'+allFile)
       fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
-      fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
+      fileNameEventDate = folderEventData+'/'+'ALL'+'/'+fileprefix+'.parquet'
       mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
       cntByEventFile[fileNameEventDate] = 0
       print("PreLoaded:"+allFile, (int(round(time.time() * 1000))-begintime))
 
-rawfiles = [f for f in os.listdir(rawLogFolder) if f.endswith('.lua') or f.endswith('.lson')]
+rawfiles = [f for f in os.listdir(folderRawLogs) if f.endswith('.lua') or f.endswith('.lson')]
 for rawfile in rawfiles:
    # if rawfile.startswith('2021-10-16_20-19-06_SAMANTHA-GAMING.lua') :
       begintime = int(round(time.time() * 1000))
-      eventDataFrame = loadRaw(rawLogFolder+'/'+rawfile)
+      eventDataFrame = loadRaw(folderRawLogs+'/'+rawfile)
       fileprefix = time.strftime('%Y-%m-%d', time.localtime(eventDataFrame['timestamp'].values[-1]/1000))
-      fileNameEventDate = eventDataFolder+'/'+'ALL'+'/'+fileprefix+'.parquet'
+      fileNameEventDate = folderEventData+'/'+'ALL'+'/'+fileprefix+'.parquet'
       mergeDataFrameIntoFilePrep(eventDataFrame, fileNameEventDate)
       print("Loaded from raw:"+rawfile, (int(round(time.time() * 1000))-begintime))
 
