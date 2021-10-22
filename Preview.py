@@ -36,11 +36,13 @@ CALC_TIMES_IN_COMBAT['duration'] = CALC_TIMES_IN_COMBAT['combat_end']-CALC_TIMES
 # display(ALL[ALL['timestamp'].between(1634415375075, 1634415920805)])
 # display(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].between(1634415375075, 1634415920805)])
 
-bigbattle = pd.DataFrame(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].between(1634418026126, 1634418028020)])
-bigbattle.sort_values( ['abilityId', 'abilityName', 'timestamp', 'seq'], ignore_index=True, inplace=True)
+# bigbattle = pd.DataFrame(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].between(1634418026126, 1634418028020)])
+bigbattle = pd.DataFrame(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].between(1634415375075, 1634415920805)])
+bigbattle = bigbattle[bigbattle['result'].isin(['BEGIN','CRITICAL_DAMAGE','DAMAGE','DOT_TICK','DOT_TICK_CRITICAL'])]
+bigbattle.sort_values( ['result', 'abilityId', 'abilityName', 'timestamp', 'seq'], ignore_index=True, inplace=True)
 display(bigbattle)
 bigbattle.to_html(folderSandBox+'/'+'output.html')
-display(bigbattle.groupby('abilityName').count())
+display(bigbattle.groupby(by=['sourceName','abilityName'], observed=True)['hitValue'].describe()) # .count()
 # display(bigbattle[bigbattle['abilityName']=='Acid Spray'])
 
 # display(getEventDataframe(event='EVENT_COMBAT_EVENT').groupby('player').boxplot())
@@ -59,6 +61,6 @@ display(bigbattle.groupby('abilityName').count())
 #          suffixes=['_left','_right'], 
 #          allow_exact_matches=False))
 
-bigbattle = getEventDataframe('ALL')
+# bigbattle = getEventDataframe('ALL')
 
 
