@@ -41,8 +41,9 @@ bigbattle = pd.DataFrame(EVENT_COMBAT_EVENT[EVENT_COMBAT_EVENT['timestamp'].betw
 bigbattle = bigbattle[bigbattle['result'].isin(['BEGIN','CRITICAL_DAMAGE','DAMAGE','DOT_TICK','DOT_TICK_CRITICAL'])]
 bigbattle.sort_values( ['result', 'abilityId', 'abilityName', 'timestamp', 'seq'], ignore_index=True, inplace=True)
 display(bigbattle)
-bigbattle.to_html(folderSandBox+'/'+'output.html')
-display(bigbattle.groupby(by=['sourceName','abilityName'], observed=True)['hitValue'].describe()) # .count()
+report = bigbattle.groupby(by=['sourceName','abilityName'], observed=True)['hitValue'].describe()
+display(report)
+report.to_html(folderSandBox+'/'+'output.html')
 # display(bigbattle[bigbattle['abilityName']=='Acid Spray'])
 
 # display(getEventDataframe(event='EVENT_COMBAT_EVENT').groupby('player').boxplot())
